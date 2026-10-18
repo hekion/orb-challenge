@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="TikTok">${svgTikTok}</a>
           </div>
           <ul class="footer-links-group">
-            <li><a href="privacy.html">プライバシーポリシー</a></li>
-            <li><a href="fanletter.html">ファンレターとギフト</a></li>
-            <li><a href="guideline.html">配信の切り抜きルール</a></li>
-            <li><a href="legal.html">特定商取引法に関する表記</a></li>
-            <li><a href="assets.html">デジタルアセット</a></li>
+            <li><a href="footer/privacy.html">プライバシーポリシー</a></li>
+            <li><a href="footer/fanletter.html">ファンレターとギフト</a></li>
+            <li><a href="footer/guideline.html">配信の切り抜きルール</a></li>
+            <li><a href="footer/legal.html">特定商取引法に関する表記</a></li>
+            <li><a href="footer/assets.html">デジタルアセット</a></li>
           </ul>
         </div>
 
@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="TikTok">${svgTikTok}</a>
           </div>
           <ul class="footer-links-group-mobile">
-            <li><a href="privacy.html">プライバシーポリシー</a></li>
-            <li><a href="fanletter.html">ファンレターとギフト</a></li>
-            <li><a href="guideline.html">切り抜きルール</a></li>
-            <li><a href="legal.html">特商法表記</a></li>
-            <li><a href="assets.html">デジタルアセット</a></li>
+            <li><a href="footer/privacy.html">プライバシーポリシー</a></li>
+            <li><a href="footer/fanletter.html">ファンレターとギフト</a></li>
+            <li><a href="footer/guideline.html">切り抜きルール</a></li>
+            <li><a href="footer/legal.html">特商法表記</a></li>
+            <li><a href="footer/assets.html">デジタルアセット</a></li>
           </ul>
           <div class="footer-team-logo">ORB GARDEN</div>
         </div>
