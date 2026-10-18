@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const isSubFolder = window.location.pathname.includes('/footer/');
   const basePath = isSubFolder ? '../' : '';
 
+  // ご指定の公式URLをセット
+  const urlX = 'https://x.com/ORBG_IBARAKI';
+  const urlYouTube = 'https://www.youtube.com/@ORBGARDEN/videos';
+  const urlTikTok = 'https://www.tiktok.com/@orb_garden?_t=ZS-8zfGGjCOhb6&_r=1';
+
   const headerHTML = `
     <header class="header">
       <div class="container">
@@ -28,12 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <li><a href="${basePath}service.html" class="nav-link">SERVICE</a></li>
             <li><a href="${basePath}sponsor.html" class="nav-link">SPONSOR</a></li>
             <li><a href="${basePath}contact.html" class="nav-link">CONTACT</a></li>
-            <li><a href="https://orbgarden.booth.pm/" target="_blank" class="nav-link nav-btn-store">STORE</a></li>
+            <li><a href="https://orbgarden.booth.pm/" target="_blank" rel="noopener noreferrer" class="nav-link nav-btn-store">STORE</a></li>
             
             <li class="mobile-overlay-sns">
-              <a href="https://x.com/" target="_blank" class="mobile-overlay-sns-icon" aria-label="X">${svgX}</a>
-              <a href="https://youtube.com/" target="_blank" class="mobile-overlay-sns-icon" aria-label="YouTube">${svgYouTube}</a>
-              <a href="https://tiktok.com/" target="_blank" class="mobile-overlay-sns-icon" aria-label="TikTok">${svgTikTok}</a>
+              <a href="${urlX}" target="_blank" rel="noopener noreferrer" class="mobile-overlay-sns-icon" aria-label="X">${svgX}</a>
+              <a href="${urlYouTube}" target="_blank" rel="noopener noreferrer" class="mobile-overlay-sns-icon" aria-label="YouTube">${svgYouTube}</a>
+              <a href="${urlTikTok}" target="_blank" rel="noopener noreferrer" class="mobile-overlay-sns-icon" aria-label="TikTok">${svgTikTok}</a>
             </li>
           </ul>
         </nav>
