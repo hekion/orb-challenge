@@ -113,19 +113,19 @@
   flex-wrap: wrap;
 }
 
+/* SNS基本ボタン */
 .member-sns-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: var(--header-bg);
-  color: #ffffff;
   padding: 10px 22px;
   border-radius: 30px;
   font-family: var(--font-en);
   font-size: 0.9rem;
   font-weight: 800;
+  color: #ffffff;
   transition: all 0.3s ease;
-  border: 1px solid var(--header-bg);
+  border: 1px solid transparent;
 }
 
 .member-sns-btn svg {
@@ -134,11 +134,27 @@
   fill: currentColor;
 }
 
+/* 各公式ブランドカラー指定 */
+.member-sns-btn.sns-x {
+  background-color: #0b0f17;
+  border-color: #0b0f17;
+}
+
+.member-sns-btn.sns-youtube {
+  background-color: #FF0000; /* YouTube公式レッド */
+  border-color: #FF0000;
+}
+
+.member-sns-btn.sns-twitch {
+  background-color: #9146FF; /* Twitch公式パープル */
+  border-color: #9146FF;
+}
+
+/* ホバー時のリアクション */
 .member-sns-btn:hover {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: #0b0f17;
   transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1);
 }
 
 .back-btn-container {
