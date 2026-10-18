@@ -1,0 +1,117 @@
+/* ==========================================
+   SERVICE ページ専用スタイル
+   ========================================== */
+
+.service-page-section {
+  padding: 60px 0 100px;
+}
+
+.service-intro-box {
+  background-color: var(--bg-sub);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 35px 40px;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.service-intro-box p {
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.service-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.service-menu-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,210,255,0.15);
+  border-color: var(--accent-color);
+}
+
+.service-menu-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 10px;
+  line-height: 1.4;
+}
+
+.service-download-box {
+  background: #ffffff;
+  border: 2px dashed var(--accent-color);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.service-download-box h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.service-discount-note {
+  background-color: #0b0f17;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 35px 40px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-discount-note p {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.service-discount-note small {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.service-discount-note a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .service-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-intro-box, .service-download-box, .service-discount-note {
+    padding: 25px 20px;
+  }
+}
