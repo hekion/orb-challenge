@@ -2,48 +2,55 @@
    メインビジュアル (Hero)
    ========================================== */
 .hero {
-  height: 60vh;
+  height: 55vh;
   min-height: 380px;
-  background: linear-gradient(rgba(13, 17, 23, 0.6), rgba(13, 17, 23, 1)), #111 center/cover no-repeat;
+  background: linear-gradient(rgba(11, 15, 23, 0.75), rgba(11, 15, 23, 0.85)), #0f172a center/cover no-repeat;
   display: flex;
   align-items: center;
   text-align: center;
+  color: #ffffff;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-family: var(--font-en);
+  font-size: 3.4rem;
   margin-bottom: 12px;
-  letter-spacing: 3px;
-  color: #fff;
+  letter-spacing: 4px;
   font-weight: 900;
 }
 
 .hero-content p {
   font-size: 1.15rem;
-  color: var(--text-sub);
+  color: #94a3b8;
+  letter-spacing: 1px;
 }
 
 /* ==========================================
-   セクション共通
+   セクション共通背景
    ========================================== */
 section {
-  padding: 80px 0;
+  padding: 90px 0;
+}
+
+section.bg-sub {
+  background-color: var(--bg-sub);
 }
 
 /* ==========================================
-   ABOUT (要約)
+   ABOUT
    ========================================== */
 .about-summary {
   text-align: center;
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
 .about-summary p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--text-main);
-  margin-bottom: 25px;
-  line-height: 1.8;
+  margin-bottom: 30px;
+  line-height: 1.9;
+  font-weight: 500;
 }
 
 /* ==========================================
@@ -62,18 +69,19 @@ section {
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  transition: transform 0.3s, border-color 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .news-main-card:hover, .news-sub-card:hover {
-  border-color: var(--accent-color);
   transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .news-thumb-box {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background-color: #1a222d;
+  background-color: #f1f5f9;
   overflow: hidden;
 }
 
@@ -84,7 +92,7 @@ section {
 }
 
 .news-main-content {
-  padding: 30px;
+  padding: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,13 +109,14 @@ section {
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  transition: transform 0.3s, border-color 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
 }
 
 .news-sub-content {
-  padding: 18px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -120,25 +129,26 @@ section {
   margin-bottom: 10px;
   font-size: 0.8rem;
   color: var(--text-sub);
+  font-family: var(--font-en);
+  font-weight: 700;
 }
 
 .news-tag {
-  background-color: rgba(0, 210, 255, 0.1);
+  background-color: rgba(0, 180, 216, 0.1);
   color: var(--accent-color);
   padding: 2px 8px;
   border-radius: 4px;
-  font-weight: 600;
 }
 
 .news-title {
-  font-size: 1rem;
-  font-weight: bold;
-  line-height: 1.5;
-  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--text-main);
 }
 
 .news-main-card .news-title {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
 }
 
 /* ==========================================
@@ -147,39 +157,41 @@ section {
 .member-tabs {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin-bottom: 35px;
   flex-wrap: wrap;
 }
 
 .tab-btn {
-  background-color: var(--card-bg);
+  background-color: #ffffff;
   color: var(--text-sub);
   border: 1px solid var(--border-color);
-  padding: 8px 20px;
+  padding: 10px 24px;
   border-radius: 30px;
-  font-weight: bold;
+  font-family: var(--font-en);
+  font-weight: 800;
   font-size: 0.85rem;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .tab-btn:hover {
-  color: #fff;
-  border-color: var(--accent-color);
+  color: var(--text-main);
+  border-color: var(--text-main);
 }
 
 .tab-btn.active {
-  background-color: var(--accent-color);
-  color: #0d1117;
-  border-color: var(--accent-color);
-  box-shadow: 0 4px 12px rgba(0, 210, 255, 0.25);
+  background-color: var(--text-main);
+  color: #ffffff;
+  border-color: var(--text-main);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
 }
 
 .member-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 22px;
 }
 
 .member-card {
@@ -188,8 +200,9 @@ section {
   overflow: hidden;
   border: 1px solid var(--border-color);
   text-align: center;
-  padding-bottom: 20px;
-  transition: transform 0.3s, border-color 0.3s;
+  padding-bottom: 22px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s, box-shadow 0.3s;
   display: block;
 }
 
@@ -198,16 +211,16 @@ section {
 }
 
 .member-card:hover {
-  border-color: var(--accent-color);
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 .member-thumb-box {
   width: 100%;
   aspect-ratio: 1 / 1;
-  background-color: #1a222d;
+  background-color: #f1f5f9;
   overflow: hidden;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .member-thumb-box img {
@@ -218,21 +231,22 @@ section {
 }
 
 .member-card:hover .member-thumb-box img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .member-role {
+  font-family: var(--font-en);
   color: var(--accent-color);
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 800;
   letter-spacing: 1px;
   margin-bottom: 4px;
 }
 
 .member-name {
   font-size: 1.15rem;
-  font-weight: bold;
-  color: #fff;
+  font-weight: 700;
+  color: var(--text-main);
 }
 
 /* ==========================================
@@ -249,6 +263,7 @@ section {
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .video-embed {
@@ -268,19 +283,19 @@ section {
 }
 
 .video-title {
-  padding: 15px;
+  padding: 16px;
   font-size: 0.95rem;
-  font-weight: bold;
-  color: #fff;
+  font-weight: 700;
+  color: var(--text-main);
 }
 
 /* ==========================================
-   SERVICE / BUSINESS (ホバーエフェクト削除版)
+   SERVICE / BUSINESS
    ========================================== */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 22px;
 }
 
 .service-card {
@@ -288,14 +303,14 @@ section {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
-  /* ホバーによる拡大・変形を無効化 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   cursor: default;
 }
 
 .service-thumb {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background-color: #1a222d;
+  background-color: #f1f5f9;
   overflow: hidden;
 }
 
@@ -306,23 +321,24 @@ section {
 }
 
 .service-content {
-  padding: 22px;
+  padding: 24px;
 }
 
 .service-content h3 {
   font-size: 1.15rem;
   margin-bottom: 10px;
-  color: #fff;
+  color: var(--text-main);
+  font-weight: 700;
 }
 
 .service-content p {
   color: var(--text-sub);
   font-size: 0.9rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* ==========================================
-   SPONSORS (画像重視＆詳細リンクへの導線)
+   SPONSORS (ホバー効果完全排除)
    ========================================== */
 .sponsor-grid {
   display: grid;
@@ -335,28 +351,17 @@ section {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 20px;
+  padding: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100px;
-  transition: border-color 0.3s;
+  min-height: 110px;
 }
 
 .sponsor-item img {
-  max-height: 60px;
+  max-height: 55px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(20%) brightness(0.9);
-  transition: filter 0.3s;
-}
-
-.sponsor-item:hover {
-  border-color: var(--accent-color);
-}
-
-.sponsor-item:hover img {
-  filter: grayscale(0%) brightness(1);
 }
 
 /* ==========================================
@@ -379,7 +384,7 @@ section {
     grid-template-columns: 1fr;
   }
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .member-tabs {
@@ -390,7 +395,7 @@ section {
     -webkit-overflow-scrolling: touch;
   }
   .tab-btn {
-    padding: 6px 16px;
+    padding: 8px 18px;
     font-size: 0.8rem;
     flex-shrink: 0;
   }
