@@ -1,20 +1,20 @@
 /* ==========================================
-   基本設定・共通変数（白背景ベース×黒フッター）
+   基本設定・共通変数
    ========================================== */
 :root {
-  --bg-color: #ffffff;            /* ボディ背景：清潔感のある白 */
-  --bg-sub: #f8fafc;              /* セクション背景の薄いグレー */
+  --bg-color: #ffffff;            /* ボディ背景：白 */
+  --bg-sub: #f8fafc;              /* セクション背景：薄いグレー */
   --card-bg: #ffffff;             /* カード背景 */
-  --text-main: #0f172a;           /* 主文字：深みのあるダークスレート */
+  --text-main: #0f172a;           /* メイン文字 */
   --text-sub: #64748b;            /* サブ文字 */
-  --accent-color: #00b4d8;        /* アクセント：洗練されたシアン */
-  --accent-hover: #0096c7;
+  --accent-color: #00d2ff;        /* アクセント：水色 / シアン */
+  --accent-hover: #00b4d8;
   --border-color: #e2e8f0;        /* 繊細な境界線 */
   --header-bg: #0b0f17;           /* ヘッダー背景：黒 */
   --footer-bg: #070a0f;           /* フッター背景：黒 */
   
-  /* フォントスタック */
-  --font-en: 'Montserrat', 'Oswald', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* フォントスタック：視認性とプロっぽさを兼ね備えた美しいゴシック */
+  --font-en: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-ja: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Meiryo, sans-serif;
   --container-width: 1200px;
 }
@@ -53,65 +53,63 @@ img {
 }
 
 /* ==========================================
-   モダンな見出しデザイン（単なる下線を廃止）
+   洗練された見出しデザイン（英語＋日本語併記）
    ========================================== */
 .section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title .en {
+  display: block;
   font-family: var(--font-en);
   font-size: 2.2rem;
-  font-weight: 900;
-  text-align: center;
-  margin-bottom: 50px;
-  letter-spacing: 3px;
+  font-weight: 800;
+  letter-spacing: 2px;
   color: var(--text-main);
-  text-transform: uppercase;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+  line-height: 1.2;
 }
 
-/* 見出しの左右にスタイリッシュなシアンのアクセントドット/ブロックを配置 */
-.section-title::before,
-.section-title::after {
-  content: '';
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-color: var(--accent-color);
-  transform: rotate(45deg);
+.section-title .ja {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 1.5px;
+  margin-top: 6px;
 }
 
+/* ==========================================
+   ボタン（通常: 水色背景×黒字 / ホバー: 黒背景×白字）
+   ========================================== */
 .btn-primary {
   display: inline-block;
-  background-color: var(--text-main);
-  color: #ffffff;
-  padding: 14px 36px;
-  border-radius: 4px;
-  font-family: var(--font-en);
-  font-weight: 800;
-  font-size: 0.95rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  background-color: var(--accent-color);
+  color: #0b0f17;
+  padding: 14px 38px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
   transition: all 0.3s ease;
-  border: 2px solid var(--text-main);
+  box-shadow: 0 4px 14px rgba(0, 210, 255, 0.25);
+  border: 2px solid var(--accent-color);
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color: #0b0f17;
+  border-color: #0b0f17;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 180, 216, 0.25);
+  box-shadow: 0 6px 18px rgba(11, 15, 23, 0.3);
 }
 
 .btn-center {
   text-align: center;
-  margin-top: 45px;
+  margin-top: 40px;
 }
 
 /* ==========================================
-   ヘッダー（黒ベース固定）
+   ヘッダー（黒ベース）
    ========================================== */
 .header {
   position: sticky;
@@ -194,7 +192,7 @@ img {
 }
 
 /* ==========================================
-   フッター（黒ベース固定・SVGアイコン）
+   フッター（黒ベース）
    ========================================== */
 .footer {
   background-color: var(--footer-bg);
