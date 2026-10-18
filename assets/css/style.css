@@ -1,651 +1,467 @@
-/* ==========================================================================
-   📌 1. ルート変数 & 全体ベース設定
-   ========================================================================== */
+/* ==========================================
+   基本設定・共通スタイル
+   ========================================== */
 :root {
-    --primary-color: #00bfff;     /* GANAR水色 */
-    --bg-dark: #121212;           /* ヘッダー・フッター用ダーク */
-    --bg-card: #ffffff;           /* カード背景 */
-    --body-bg: #f4f6f9;           /* サイト全体の背景（少しグレー） */
-    --text-main: #1e293b;         /* メイン文字色 */
-    --text-muted: #64748b;        /* 補足文字色 */
-    --accent-price: #df2020;      /* 価格の赤 */
-    --accent-gold: #f59e0b;       /* ランキング1位などのゴールド */
+  --bg-color: #0b0e14;
+  --card-bg: #161b22;
+  --text-color: #f0f6fc;
+  --text-sub: #8b949e;
+  --accent-color: #ff3366; /* eスポーツらしいアクセントカラー */
+  --accent-hover: #ff6688;
+  --border-color: #30363d;
+  --font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  --container-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: var(--text-main);
-    background-color: var(--body-bg);
-    -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
 }
 
-/* ==========================================================================
-   📦 2. 共通固定ヘッダー & 共通フッター
-   ========================================================================== */
-header {
-    background-color: var(--bg-dark);
-    color: #ffffff;
-    padding: 18px;
-    text-align: center;
-    font-weight: 800;
-    font-size: 1.05rem;
-    letter-spacing: 2px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 100;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.menu-trigger-btn {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 4px 8px;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.header-logo-text {
-    cursor: pointer;
-    display: inline-block;
-}
-
-footer {
-    background-color: var(--bg-dark);
-    color: #ffffff;
-    padding: 40px 20px;
-    margin-top: 60px; /* コンテンツとの間隔 */
-    text-align: center;
-}
-
-.footer-logo {
-    font-size: 1rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-    color: var(--primary-color);
-}
-
-.footer-copy {
-    font-size: 0.7rem;
-    color: #64748b;
-    margin: 0;
-}
-
-/* ==========================================================================
-   🧱 3. 各ページの「ボディ内」ヘッダー・タイトルエリア
-   ========================================================================== */
-.page-body-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #f1f5f9;
-}
-
-/* 背景が白ではないページ（選手一覧など）で独立して使うヘッダー */
-.page-body-header-flat {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 16px 10px 16px;
-}
-
-.page-body-title {
-    font-size: 1.1rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: var(--text-main);
-    margin: 0;
-}
-
-.body-back-btn {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-decoration: none;
-    background-color: #f1f5f9;
-    padding: 6px 12px;
-    border-radius: 20px;
-    transition: background 0.2s;
-}
-
-.body-back-btn:hover {
-    background-color: #e2e8f0;
-}
-
-/* ==========================================================================
-   🏠 4. トップページ（index.html）専用：余白とジャンルタイトルの強調
-   ========================================================================== */
-.section-container {
-    margin-top: 54px;    /* ❌つめつめ感を排除：各ジャンルの間隔をガッツリ広く */
-    margin-bottom: 24px;
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .section-title {
-    font-size: 1rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    padding: 12px 16px;
-    margin-bottom: 20px;
-    color: var(--text-main);
-    /* 🌟グラデーションを敷いてタイトルをガツンと強調 */
-    background: linear-gradient(90deg, rgba(0, 191, 255, 0.15) 0%, rgba(255,255,255,0) 100%);
-    border-left: 5px solid var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  letter-spacing: 2px;
 }
 
-/* 検索窓の余白調整 */
-.search-box {
-    padding: 24px 16px 10px 16px;
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
-.search-box input {
-    width: 100%;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 30px;
-    box-sizing: border-box;
-    font-size: 0.95rem;
-    outline: none;
-    background-color: var(--bg-card);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+.btn-primary {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-/* カテゴリタグ横スクロール */
-.horizontal-scroll {
-    display: flex;
-    overflow-x: auto;
-    padding: 10px 16px 20px 16px;
-    gap: 10px;
+.btn-primary:hover {
+  background-color: var(--accent-hover);
 }
 
-.horizontal-scroll::-webkit-scrollbar {
-    display: none; /* スクロールバー非表示 */
+.btn-center {
+  text-align: center;
+  margin-top: 30px;
 }
 
-.category-tag {
-    background-color: var(--bg-card);
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    white-space: nowrap;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+/* ==========================================
+   ヘッダー
+   ========================================== */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(11, 14, 20, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
 }
 
-/* 選手ページナビ誘導ボタン */
-.players-nav-box {
-    padding: 0 16px;
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
 }
 
-.nav-to-players-btn {
-    width: 100%;
-    background-color: var(--bg-card);
-    color: var(--text-main);
-    border: 1px solid rgba(0, 191, 255, 0.25);
-    padding: 16px;
-    border-radius: 12px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    cursor: pointer;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* 特大スライドバナー */
-.slider-wrapper {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
 }
 
-.slider-container {
-    display: flex;
-    width: 300%;
-    height: 190px;
-    animation: slideAnimation 12s infinite ease-in-out;
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.slide {
-    width: 33.333%;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
+.nav-link:hover {
+  color: var(--accent-color);
 }
 
-.slide h2 {
-    margin: 0 0 6px 0;
-    font-size: 1.3rem;
-    font-weight: 800;
+.nav-btn-store {
+  background-color: #238636;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
-.slide p {
-    margin: 0;
-    font-size: 0.8rem;
-    opacity: 0.9;
-    background: rgba(0,0,0,0.2);
-    padding: 3px 12px;
-    border-radius: 20px;
+/* ハンバーガーボタン（スマホ用） */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-@keyframes slideAnimation {
-    0%, 28% { transform: translateX(0); }
-    33%, 61% { transform: translateX(-33.333%); }
-    66%, 94% { transform: translateX(-66.666%); }
-    100% { transform: translateX(0); }
+/* ==========================================
+   メインビジュアル (Hero)
+   ========================================== */
+.hero {
+  height: 70vh;
+  min-height: 400px;
+  background: linear-gradient(rgba(11, 14, 20, 0.6), rgba(11, 14, 20, 1)), url('../images/hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
-/* 売上ランキングアイテム */
-.ranking-container {
-    padding: 0 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
 }
 
-.ranking-item {
-    display: flex;
-    align-items: center;
-    background-color: var(--bg-card);
-    padding: 12px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-    cursor: pointer;
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--text-sub);
 }
 
-.rank-badge {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    color: #ffffff;
-    font-size: 0.8rem;
-    margin-right: 14px;
-    background-color: #94a3b8;
+/* ==========================================
+   セクション共通
+   ========================================== */
+section {
+  padding: 80px 0;
 }
 
-.rank-1 { background-color: var(--accent-gold); }
-.rank-2 { background-color: #cbd5e1; color: #475569; }
-
-.rank-img {
-    width: 48px;
-    height: 48px;
-    background-color: #f8fafc;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    margin-right: 14px;
+/* ==========================================
+   ABOUT (要約)
+   ========================================== */
+.about-summary {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.rank-info {
-    flex-grow: 1;
+.about-summary p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
 }
 
-/* ==========================================================================
-   👕 5. 商品詳細ページ（product.html）専用スタイリング
-   ========================================================================== */
-.main-img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* 正方形アパレルECスタイル */
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+/* ==========================================
+   NEWS (メイン1件 + サブ3件)
+   ========================================== */
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.main-img-placeholder {
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: 800;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
+.news-main-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
 }
 
-.content-padding {
-    padding: 30px 20px 60px 20px;
-    background-color: var(--bg-card);
-    border-radius: 24px 24px 0 0;
-    margin-top: -24px; /* 画像エリアに少し被せて高級感を演出 */
-    position: relative;
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+.news-main-card .news-img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  background-color: #222;
+  object-fit: cover;
 }
 
-.product-title {
-    font-size: 1.4rem;
-    font-weight: 900;
-    line-height: 1.4;
-    color: var(--text-main);
-    margin-bottom: 8px;
+.news-main-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.product-price-large {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: var(--accent-price);
-    margin-bottom: 24px;
-    border-bottom: 1px solid #f1f5f9;
-    padding-bottom: 16px;
+.news-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.description {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 36px;
+.news-sub-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s;
 }
 
-.checkout-btn {
-    width: 100%;
-    background: linear-gradient(90deg, #005f9e, var(--primary-color));
-    color: #ffffff;
-    border: none;
-    padding: 18px;
-    border-radius: 14px;
-    font-size: 1.1rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    cursor: pointer;
-    box-shadow: 0 8px 24px rgba(0, 191, 255, 0.25);
-    transition: transform 0.2s;
+.news-sub-card:hover {
+  transform: translateY(-5px);
 }
 
-.checkout-btn:active {
-    transform: scale(0.98);
+.news-sub-card .news-img {
+  width: 100%;
+  height: 160px;
+  background-color: #222;
+  object-fit: cover;
 }
 
-/* ==========================================================================
-   👤 6. 選手一覧ページ（players.html）専用スタイリング
-   ========================================================================== */
-.page-explain-text {
-    padding: 8px 16px 16px 16px;
-    font-size: 0.8rem;
-    color: var(--text-muted);
+.news-sub-content {
+  padding: 15px;
 }
 
-.player-photo-grid {
-    display: grid;
+.news-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+}
+
+.news-tag {
+  background-color: var(--border-color);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.news-title {
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* ==========================================
+   MEMBER (ピックアップ)
+   ========================================== */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.member-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.member-img {
+  width: 100%;
+  height: 220px;
+  background-color: #222;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.member-role {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.member-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ==========================================
+   YOUTUBE & MEDIA (3つ横並び)
+   ========================================== */
+.youtube-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.video-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-title {
+  padding: 15px;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+/* ==========================================
+   SERVICE / BUSINESS
+   ========================================== */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--text-sub);
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   SPONSOR
+   ========================================== */
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.sponsor-item {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: var(--text-sub);
+}
+
+/* ==========================================
+   フッター
+   ========================================== */
+.footer {
+  background-color: #06080c;
+  border-top: 1px solid var(--border-color);
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: var(--text-sub);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+/* ==========================================
+   レスポンシブ対応 (スマホ・タブレット)
+   ========================================== */
+@media (max-width: 992px) {
+  .news-main-card {
+    grid-template-columns: 1fr;
+  }
+  .news-sub-grid, .youtube-grid, .service-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .member-grid, .sponsor-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    padding: 12px 16px 40px 16px;
+  }
 }
 
-.player-photo-card {
-    border-radius: 12px;
-    position: relative;
-    width: 100%;
-    aspect-ratio: 3 / 2; /* スタジアムフォト風比率 */
-    overflow: hidden;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.player-photo-card:active {
-    transform: scale(0.97);
-}
-
-.player-photo-inner {
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-list {
+    display: none; /* JSでトグル表示 */
     position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.4) 100%);
-    padding: 12px;
-    box-sizing: border-box;
-    display: flex;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.photo-pos-badge {
-    align-self: flex-start;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    color: #ffffff;
-    font-size: 0.65rem;
-    font-weight: 800;
-    padding: 3px 8px;
-    border-radius: 4px;
-}
-
-.photo-main-info {
-    display: flex;
-    align-items: flex-end;
-    gap: 8px;
-}
-
-.photo-num {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .news-sub-grid, .youtube-grid, .service-grid, .member-grid, .sponsor-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-content h1 {
     font-size: 2rem;
-    font-weight: 900;
-    color: var(--primary-color);
-    line-height: 0.9;
-    font-style: italic;
-}
-
-.photo-name {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #ffffff;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-}
-
-/* ==========================================================================
-   🏷️ 7. 商品一覧・カテゴリページ（category.html）専用
-   ========================================================================== */
-.category-info-bar {
-    background-color: #e2e8f0;
-    padding: 10px 16px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-muted);
-}
-
-/* ==========================================================================
-   🛍️ 8. 共通商品グリッドシステム
-   ========================================================================== */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    padding: 0 16px;
-}
-
-.product-card {
-    background-color: var(--bg-card);
-    border-radius: 12px;
-    padding: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.product-card:active {
-    transform: scale(0.97);
-}
-
-.product-img {
-    width: 100%;
-    height: 130px;
-    background-color: #f8fafc;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-}
-
-.product-name {
-    font-size: 0.85rem;
-    font-weight: 700;
-    line-height: 1.4;
-    margin-bottom: 6px;
-    color: var(--text-main);
-}
-
-.product-price {
-    font-size: 0.9rem;
-    color: var(--accent-price);
-    font-weight: 800;
-}
-
-.more-btn-container {
-    padding: 18px 16px 4px 16px;
-    text-align: center;
-}
-
-.view-all-btn {
-    width: 100%;
-    background-color: transparent;
-    color: var(--text-main);
-    border: 1px solid #cbd5e1;
-    padding: 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 800;
-    cursor: pointer;
-}
-
-/* ==========================================================================
-   📱 9. 全ページ共通ドロワーメニュー（川崎アズネロ風）
-   ========================================================================== */
-.drawer-overlay {
-    position: fixed;
-    inset: 0;
-    background-color: #ffffff;
-    z-index: 200;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-out;
-    overflow-y: auto;
-    display: flex;
+  }
+  .footer-content {
     flex-direction: column;
+  }
 }
-
-.drawer-overlay.open {
-    transform: translateX(0);
-}
-
-.drawer-header {
-    padding: 16px;
-    display: flex;
-    justify-content: flex-start;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.drawer-close-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-    color: #94a3b8;
-}
-
-.close-icon { font-size: 1.2rem; }
-.close-text { font-size: 0.75rem; font-weight: 700; }
-
-.drawer-body {
-    padding: 20px 16px 60px 16px;
-}
-
-.drawer-search-box {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.drawer-search-box input {
-    flex-grow: 1;
-    background-color: #f1f5f9;
-    border: 1px solid #cbd5e1;
-    padding: 12px 16px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    outline: none;
-}
-
-.drawer-search-submit {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    border: none;
-    padding: 0 20px;
-    border-radius: 6px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.drawer-tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 24px;
-}
-
-.drawer-capsule-tag {
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 8px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.drawer-mymenu-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    background-color: #e2e8f0;
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 24px;
-}
-
-.mymenu-cell {
-    display: flex;
-    align-items: center;
-    padding: 16px 14px;
-    color: #ffffff;
-    cursor: pointer;
-    gap: 10px;
-}
-
-.cell-black { background-color: #121212; }
-.cell-blue { background-color: #3b82f6; }
-.cell-gold { background-color: #b4965c; }
-.cell-red { background-color: #a92332; }
-
-.cell-icon { font-size: 1.2rem; }
-.cell-text { font-size: 0.85rem; font-weight: 700; }
-
-.drawer-nav-list {
-    display: flex;
-    flex-direction: column;
-}
-
-.drawer-nav-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 4px;
-    border-bottom: 1px solid #f1f5f9;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #3b82f6;
-    cursor: pointer;
-}
-
-.drawer-nav-item .arrow { color: #cbd5e1; }
-.drawer-nav-item.item-sale { color: #a92332; }
