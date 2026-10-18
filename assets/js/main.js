@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const memberCards = document.querySelectorAll('.member-card');
 
   if (tabBtns.length > 0 && memberCards.length > 0) {
-    // 初期表示：STREAMERを選択状態にして表示を反映
     const defaultCategory = 'streamer';
     
     tabBtns.forEach(btn => {
@@ -33,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // 初回のカードフィルタリング実行（STREAMERのみ表示）
     memberCards.forEach(card => {
       const cardCategory = card.getAttribute('data-category');
       if (cardCategory === defaultCategory) {
