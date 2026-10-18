@@ -1,9 +1,60 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ==========================================
+  // 1. トップページ用 ニュース自動振り分け
+  // ==========================================
+  const topMainNews = document.getElementById('topMainNews');
+  const topSubNews = document.getElementById('topSubNews');
+
+  if (topMainNews && topSubNews && typeof newsData !== 'undefined' && newsData.length > 0) {
+    // 1番新しい記事 (メイン大枠)
+    const latest = newsData[0];
+    topMainNews.innerHTML = `
+      <a href="news-detail.html?id=${latest.id}" class="news-main-card" style="text-decoration:none; color:inherit;">
+        <div class="news-thumb-box">
+          <img src="${latest.thumbnail}" alt="${latest.title}" onerror="this.style.background='#cbd5e1'">
+        </div>
+        <div class="news-main-content">
+          <div class="news-meta">
+            <span class="news-date">${latest.date}</span>
+            <span class="news-tag">${latest.tag}</span>
+          </div>
+          <h3 class="news-title">${latest.title}</h3>
+        </div>
+      </a>
+    `;
+
+    // 2〜4番目の記事 (サブ3件横並び)
+    let subHtml = '';
+    const subList = newsData.slice(1, 4); // インデックス1〜3（2番目〜4番目）
+    subList.forEach(item => {
+      subHtml += `
+        <a href="news-detail.html?id=${item.id}" class="news-sub-card" style="text-decoration:none; color:inherit;">
+          <div class="news-thumb-box">
+            <img src="${item.thumbnail}" alt="${item.title}" onerror="this.style.background='#cbd5e1'">
+          </div>
+          <div class="news-sub-content">
+            <div class="news-meta">
+              <span class="news-date">${item.date}</span>
+              <span class="news-tag">${item.tag}</span>
+            </div>
+            <h4 class="news-title">${item.title}</h4>
+          </div>
+        </a>
+      `;
+    });
+    topSubNews.innerHTML = subHtml;
+  }
+
+
+  // ==========================================
+  // 2. メンバータブ切り替え制御 (STREAMERスタート)
+  // ==========================================
   const tabBtns = document.querySelectorAll('.member-tabs .tab-btn');
   const memberCards = document.querySelectorAll('.member-card');
 
   if (tabBtns.length > 0 && memberCards.length > 0) {
-    // ページ読み込み時に初期アクティブなカテゴリ（streamer）のカード以外を隠す処理
+    // 初期表示：アクティブなタブ（streamer）のカード以外を非表示にする
     const activeTab = document.querySelector('.member-tabs .tab-btn.active');
     if (activeTab) {
       const initialCat = activeTab.getAttribute('data-category');
@@ -18,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // タブクリック時の切り替え制御
+    // タブクリック時のフィルタリング制御
     tabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         tabBtns.forEach(b => b.classList.remove('active'));
@@ -40,4 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
 });
