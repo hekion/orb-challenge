@@ -2,24 +2,9 @@
    MEMBER ページ専用スタイル
    ========================================== */
 
-/* ページヒーロー */
-.page-hero {
-  background-color: var(--header-bg);
-  color: #ffffff;
-  padding: 60px 0;
-  text-align: center;
-}
-
-.page-hero h1 {
-  font-family: var(--font-en);
-  font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: 3px;
-}
-
 /* メンバーセクション */
 .member-page-section {
-  padding: 80px 0 100px;
+  padding: 60px 0 100px;
 }
 
 /* メンバーがいない場合の空表示メッセージ */
@@ -32,4 +17,139 @@
   border: 1px solid var(--border-color);
   border-radius: 12px;
   grid-column: 1 / -1;
+}
+
+/* ==========================================
+   MEMBER DETAIL (詳細ページ用スタイル)
+   ========================================== */
+.member-detail-section {
+  padding: 60px 0 100px;
+}
+
+.member-detail-container {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 50px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 50px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.04);
+}
+
+.member-detail-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1050 / 380;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0b0f17 0%, #1e293b 100%);
+  border: 1px solid var(--border-color);
+}
+
+.member-detail-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.member-detail-header {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.member-detail-category {
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.member-detail-name {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--text-main);
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.member-detail-bio {
+  margin-bottom: 35px;
+}
+
+.member-detail-bio h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 12px;
+}
+
+.member-detail-bio p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--text-main);
+  white-space: pre-line;
+}
+
+.member-detail-sns h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 15px;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 12px;
+}
+
+.member-sns-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.member-sns-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--header-bg);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: all 0.3s ease;
+  border: 1px solid var(--header-bg);
+}
+
+.member-sns-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.member-sns-btn:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #0b0f17;
+  transform: translateY(-2px);
+}
+
+.back-btn-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .member-detail-container {
+    grid-template-columns: 1fr;
+    padding: 30px 24px;
+    gap: 30px;
+  }
 }
