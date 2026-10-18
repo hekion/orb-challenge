@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <!-- 共通ヘッダー（黒） -->
+  <!-- 共通ヘッダー -->
   <div id="header-placeholder"></div>
 
   <!-- メインビジュアル -->
@@ -112,7 +112,7 @@
     </div>
   </section>
 
-  <!-- MEMBER (横長カード 1050:380：名前左・立ち絵右) -->
+  <!-- MEMBER (初期表示 STREAMER スタート) -->
   <section class="member">
     <div class="container">
       <h2 class="section-title">
@@ -120,76 +120,168 @@
         <span class="ja">所属メンバー</span>
       </h2>
       
-      <!-- カテゴリ切り替えタブ（初期選択: STREAMER） -->
+      <!-- カテゴリ切り替えタブ（初期選択: STREAMER / ALLなし） -->
       <div class="member-tabs">
-        <button class="tab-btn" data-category="streamer">STREAMER</button>
+        <button class="tab-btn active" data-category="streamer">STREAMER</button>
         <button class="tab-btn" data-category="valorant">VALORANT</button>
         <button class="tab-btn" data-category="apex">APEX</button>
         <button class="tab-btn" data-category="staff">STAFF</button>
-        <button class="tab-btn" data-category="all">ALL</button>
+        <button class="tab-btn" data-category="creator">CREATOR</button>
       </div>
 
       <!-- 横長メンバーカードグリッド -->
       <div class="member-grid">
         
-        <!-- Streamer 1 -->
+        <!-- STREAMER (7名) -->
         <a href="member-detail.html?id=junpeach" class="member-card" data-category="streamer">
           <div class="member-info">
             <h3 class="member-name">じゅんぴーち</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member1.jpg" alt="じゅんぴーち" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member-junpeach.jpg" alt="じゅんぴーち" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
-        <!-- Streamer 2 -->
         <a href="member-detail.html?id=zaki" class="member-card" data-category="streamer">
           <div class="member-info">
             <h3 class="member-name">ザキ</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member2.jpg" alt="ザキ" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member-zaki.jpg" alt="ザキ" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
-        <!-- Streamer 3 -->
         <a href="member-detail.html?id=nachi" class="member-card" data-category="streamer">
           <div class="member-info">
             <h3 class="member-name">なち</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member3.jpg" alt="なち" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member-nachi.jpg" alt="なち" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
-        <!-- VALORANT Player (不在用) -->
-        <div class="member-card hide" data-category="valorant" style="display: none;"></div>
-
-        <!-- APEX Player -->
-        <a href="member-detail.html?id=dex" class="member-card" data-category="apex">
+        <a href="member-detail.html?id=shirokuma" class="member-card" data-category="streamer">
           <div class="member-info">
-            <h3 class="member-name">Dex</h3>
+            <h3 class="member-name">白熊アイス</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-apex1.jpg" alt="APEX Player" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member-shirokuma.jpg" alt="白熊アイス" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
-        <!-- Staff -->
+        <a href="member-detail.html?id=opiroyan" class="member-card" data-category="streamer">
+          <div class="member-info">
+            <h3 class="member-name">おぴろやん</h3>
+          </div>
+          <div class="member-thumb-box">
+            <img src="assets/images/member-opiroyan.jpg" alt="おぴろやん" onerror="this.style.background='#1e293b'">
+          </div>
+        </a>
+
+        <a href="member-detail.html?id=rutodesupon" class="member-card" data-category="streamer">
+          <div class="member-info">
+            <h3 class="member-name">るとですぽん</h3>
+          </div>
+          <div class="member-thumb-box">
+            <img src="assets/images/member-rutodesupon.jpg" alt="るとですぽん" onerror="this.style.background='#1e293b'">
+          </div>
+        </a>
+
+        <a href="member-detail.html?id=monariza" class="member-card" data-category="streamer">
+          <div class="member-info">
+            <h3 class="member-name">もなりざ</h3>
+          </div>
+          <div class="member-thumb-box">
+            <img src="assets/images/member-monariza.jpg" alt="もなりざ" onerror="this.style.background='#1e293b'">
+          </div>
+        </a>
+
+        <!-- VALORANT (不在用ダミー) -->
+        <div class="member-card hide" data-category="valorant" style="display: none;"></div>
+
+        <!-- STAFF (3名) -->
         <a href="member-detail.html?id=kurusu" class="member-card" data-category="staff">
           <div class="member-info">
             <h3 class="member-name">クルス</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member4.jpg" alt="クルス" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member-kurusu.jpg" alt="クルス" onerror="this.style.background='#1e293b'">
+          </div>
+        </a>
+
+        <a href="member-detail.html?id=mumurumuru" class="member-card" data-category="staff">
+          <div class="member-info">
+            <h3 class="member-name">mumurumuru</h3>
+          </div>
+          <div class="member-thumb-box">
+            <img src="assets/images/member-mumurumuru.jpg" alt="mumurumuru" onerror="this.style.background='#1e293b'">
+          </div>
+        </a>
+
+        <a href="member-detail.html?id=pyonaka" class="member-card" data-category="staff">
+          <div class="member-info">
+            <h3 class="member-name">ぴょなか</h3>
+          </div>
+          <div class="member-thumb-box">
+            <img src="assets/images/member-pyonaka.jpg" alt="ぴょなか" onerror="this.style.background='#1e293b'">
+          </div>
+        </a>
+
+        <!-- CREATOR (1名) -->
+        <a href="member-detail.html?id=sachie" class="member-card" data-category="creator">
+          <div class="member-info">
+            <h3 class="member-name">サチエ</h3>
+          </div>
+          <div class="member-thumb-box">
+            <img src="assets/images/member-sachie.jpg" alt="サチエ" onerror="this.style.background='#1e293b'">
+          </div>
+        </a>
+
+        <!-- APEX LEGENDS (4名) -->
+        <a href="member-detail.html?id=dex" class="member-card" data-category="apex">
+          <div class="member-info">
+            <h3 class="member-name">Dex</h3>
+          </div>
+          <div class="member-thumb-box">
+            <img src="assets/images/member-dex.jpg" alt="Dex" onerror="this.style.background='#1e293b'">
+          </div>
+        </a>
+
+        <a href="member-detail.html?id=aurora" class="member-card" data-category="apex">
+          <div class="member-info">
+            <h3 class="member-name">Aurora</h3>
+          </div>
+          <div class="member-thumb-box">
+            <img src="assets/images/member-aurora.jpg" alt="Aurora" onerror="this.style.background='#1e293b'">
+          </div>
+        </a>
+
+        <a href="member-detail.html?id=gyeol" class="member-card" data-category="apex">
+          <div class="member-info">
+            <h3 class="member-name">Gyeol</h3>
+          </div>
+          <div class="member-thumb-box">
+            <img src="assets/images/member-gyeol.jpg" alt="Gyeol" onerror="this.style.background='#1e293b'">
+          </div>
+        </a>
+
+        <a href="member-detail.html?id=edan" class="member-card" data-category="apex">
+          <div class="member-info">
+            <h3 class="member-name">Edan (Coach)</h3>
+          </div>
+          <div class="member-thumb-box">
+            <img src="assets/images/member-edan.jpg" alt="Edan" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
       </div>
+      <div class="btn-center">
+        <a href="member.html" class="btn-primary">メンバー一覧を見る</a>
+      </div>
     </div>
   </section>
 
-  <!-- YOUTUBE & MEDIA (ご指定の3本の動画を設定) -->
+  <!-- YOUTUBE & MEDIA -->
   <section class="youtube bg-sub">
     <div class="container">
       <h2 class="section-title">
@@ -197,35 +289,32 @@
         <span class="ja">公式動画・配信</span>
       </h2>
       <div class="youtube-grid">
-        <!-- YouTube 1 -->
         <div class="video-card">
           <div class="video-embed">
             <iframe src="https://www.youtube.com/embed/nPU1rS-RGkw" allowfullscreen></iframe>
           </div>
-          <div class="video-title">ORB GARDEN 公式配信 1</div>
+          <div class="video-title">人気ストリーマー多数出場のAPEX大会</div>
         </div>
-        <!-- YouTube 2 -->
         <div class="video-card">
           <div class="video-embed">
             <iframe src="https://www.youtube.com/embed/EFXLFEUcnwc" allowfullscreen></iframe>
           </div>
-          <div class="video-title">ORB GARDEN 公式配信 2</div>
+          <div class="video-title">メンバーコラボ動画も多数！</div>
         </div>
-        <!-- YouTube 3 -->
         <div class="video-card">
           <div class="video-embed">
             <iframe src="https://www.youtube.com/embed/CpRSn4YNp5E" allowfullscreen></iframe>
           </div>
-          <div class="video-title">ORB GARDEN 公式配信 3</div>
+          <div class="video-title">ORBでしか見られない企画動画も多数！</div>
         </div>
       </div>
       <div class="btn-center">
-        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="btn-primary">YouTubeチャンネルはこちら</a>
+        <a href="https://m.youtube.com/@ORBGARDEN/videos" target="_blank" rel="noopener noreferrer" class="btn-primary">YouTubeチャンネルはこちら</a>
       </div>
     </div>
   </section>
 
-  <!-- STORE BANNER (YouTubeとクリエイティブの間に設置) -->
+  <!-- STORE BANNER -->
   <div class="store-banner-section">
     <div class="container">
       <a href="https://orbgarden.booth.pm/" target="_blank" rel="noopener noreferrer" class="store-banner-link">
@@ -276,7 +365,7 @@
     </div>
   </section>
 
-  <!-- SPONSORS (全6社: 斎藤英次商店、eプリントサービス、菊地蓮根、アスタス、仁瓦堂、カーマッチ) -->
+  <!-- SPONSORS -->
   <section class="sponsor bg-sub">
     <div class="container">
       <h2 class="section-title">
@@ -309,7 +398,7 @@
     </div>
   </section>
 
-  <!-- 共通フッター（黒） -->
+  <!-- 共通フッター -->
   <div id="footer-placeholder"></div>
 
   <!-- JS読み込み -->
