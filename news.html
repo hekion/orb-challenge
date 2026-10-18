@@ -13,7 +13,8 @@
     .sub-hero h1 { font-family: var(--font-en); font-size: 2.5rem; font-weight: 900; letter-spacing: 2px; }
     .news-list-section { padding: 80px 0; }
     .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1200px; margin: 0 auto; }
-    .news-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+    .news-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform 0.2s; }
+    .news-card:hover { transform: translateY(-4px); }
     .news-thumb { aspect-ratio: 16/9; background: #f1f5f9; }
     .news-thumb img { width: 100%; height: 100%; object-fit: cover; }
     .news-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
@@ -34,33 +35,42 @@
   </div>
 
   <main class="news-list-section container">
-    <div class="news-grid">
-      <article class="news-card">
-        <div class="news-thumb"><img src="assets/images/sample-news1.jpg" alt="ニュース" onerror="this.style.background='#cbd5e1'"></div>
-        <div class="news-body">
-          <div class="news-meta"><span class="news-date">2026.10.14</span><span class="news-tag">MEDIA</span></div>
-          <h3 class="news-title">茨城県教育委員会公式サイト「おしえて ふれあちゃん！」にORB GARDENが掲載されました！</h3>
-        </div>
-      </article>
-      <article class="news-card">
-        <div class="news-thumb"><img src="assets/images/sample-news2.jpg" alt="ニュース" onerror="this.style.background='#cbd5e1'"></div>
-        <div class="news-body">
-          <div class="news-meta"><span class="news-date">2026.10.01</span><span class="news-tag">TEAM</span></div>
-          <h3 class="news-title">APEX競技部門 新メンバー加入のお知らせ</h3>
-        </div>
-      </article>
-      <article class="news-card">
-        <div class="news-thumb"><img src="assets/images/sample-news3.jpg" alt="ニュース" onerror="this.style.background='#cbd5e1'"></div>
-        <div class="news-body">
-          <div class="news-meta"><span class="news-date">2026.09.01</span><span class="news-tag">SPONSOR</span></div>
-          <h3 class="news-title">【お知らせ】スポンサー契約継続のお知らせ</h3>
-        </div>
-      </article>
+    <!-- news-data.js から自動で一覧が流し込まれます -->
+    <div class="news-grid" id="newsGridContainer">
+      <p style="grid-column: 1 / -1; text-align: center; color: var(--text-sub);">ニュースを読み込み中...</p>
     </div>
   </main>
 
   <div id="footer-placeholder"></div>
+
+  <!-- 共通JSおよびデータ読み込み -->
+  <script src="assets/js/news-data.js"></script>
   <script src="assets/js/header.js"></script>
   <script src="assets/js/footer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('newsGridContainer');
+      if (container && typeof newsData !== 'undefined') {
+        let html = '';
+        newsData.forEach(item => {
+          html += `
+            <a href="news-detail.html?id=${item.id}" class="news-card">
+              <div class="news-thumb">
+                <img src="${item.thumbnail}" alt="${item.title}" onerror="this.style.background='#cbd5e1'">
+              </div>
+              <div class="news-body">
+                <div class="news-meta">
+                  <span class="news-date">${item.date}</span>
+                  <span class="news-tag">${item.tag}</span>
+                </div>
+                <h3 class="news-title">${item.title}</h3>
+              </div>
+            </a>
+          `;
+        });
+        container.innerHTML = html;
+      }
+    });
+  </script>
 </body>
 </html>
