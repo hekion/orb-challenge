@@ -221,7 +221,6 @@ section.bg-sub {
   box-shadow: 0 12px 28px rgba(0, 210, 255, 0.15);
 }
 
-/* カード左側：名前エリア */
 .member-info {
   z-index: 2;
   display: flex;
@@ -237,7 +236,6 @@ section.bg-sub {
   line-height: 1.2;
 }
 
-/* カード右側：立ち絵/画像エリア */
 .member-thumb-box {
   position: absolute;
   right: 0;
@@ -248,7 +246,6 @@ section.bg-sub {
   z-index: 1;
 }
 
-/* 立ち絵左側のグラデーションフェード */
 .member-thumb-box::before {
   content: '';
   position: absolute;
@@ -313,6 +310,41 @@ section.bg-sub {
 }
 
 /* ==========================================
+   STORE BANNER (ショップ誘導バナー)
+   ========================================== */
+.store-banner-section {
+  padding: 40px 0;
+}
+
+.store-banner-link {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 1; /* おすすめ比率 3:1 */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.store-banner-link:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+}
+
+.store-banner-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.store-banner-link:hover img {
+  transform: scale(1.03);
+}
+
+/* ==========================================
    SERVICE / BUSINESS
    ========================================== */
 .service-grid {
@@ -361,11 +393,11 @@ section.bg-sub {
 }
 
 /* ==========================================
-   SPONSORS
+   SPONSORS (PC: 横3列 × 縦2列 / スマホ: 横2列 × 縦3列)
    ========================================== */
 .sponsor-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* PC: 横3列 */
   gap: 20px;
   align-items: center;
 }
@@ -397,15 +429,21 @@ section.bg-sub {
   .news-sub-grid, .youtube-grid, .service-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .member-grid, .sponsor-grid {
+  .member-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
-  .news-sub-grid, .youtube-grid, .service-grid, .sponsor-grid {
+  .news-sub-grid, .youtube-grid, .service-grid {
     grid-template-columns: 1fr;
   }
+
+  /* スマホ版スポンサー: 横2列 × 縦3列 */
+  .sponsor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .hero-content h1 {
     font-size: 2.2rem;
   }
