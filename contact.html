@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACT | ORB GARDEN</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+
+  <!-- 共通ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <main class="contact-page-section">
+    <div class="container">
+      
+      <h2 class="section-title">
+        <span class="en">CONTACT</span>
+        <span class="ja">お問い合わせ</span>
+      </h2>
+
+      <div class="contact-form-card">
+        <p class="contact-desc">
+          スポンサー・パートナーシップのご相談、イベント出演・ブース出展のご依頼、<br>
+          デザイン・動画制作案件など、お気軽にお問い合わせください。
+        </p>
+
+        <form onsubmit="event.preventDefault(); alert('お問い合わせを受信しました。（※シミュレーション）');">
+          <div class="form-group">
+            <label for="name">お名前 / 貴社名 <span class="required">*</span></label>
+            <input type="text" id="name" required placeholder="例: 茨城 太郎">
+          </div>
+
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">*</span></label>
+            <input type="email" id="email" required placeholder="例: info@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="category">お問い合わせ種別 <span class="required">*</span></label>
+            <select id="category" required>
+              <option value="">選択してください</option>
+              <option value="sponsor">スポンサー・協賛について</option>
+              <option value="event">イベントブース出展・大会運営依頼</option>
+              <option value="creative">デザイン・動画制作のご依頼</option>
+              <option value="media">取材・メディア出演について</option>
+              <option value="other">その他のお問い合わせ</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+            <textarea id="message" required placeholder="具体的なご相談内容をご記入ください"></textarea>
+          </div>
+
+          <div class="btn-center">
+            <button type="submit" class="btn-primary" style="cursor:pointer; border:none; width:100%;">送信する</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 共通フッター -->
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/footer.js"></script>
+</body>
+</html>
