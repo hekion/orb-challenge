@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const svgTikTok = `<svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.57-1.31 1.56-1.3 2.56.01.9.46 1.78 1.18 2.29.83.59 1.93.75 2.9.45.98-.28 1.78-1.03 2.06-2.02.13-.5.16-1.02.16-1.53V.02z"/></svg>`;
   const svgArrowUp = `<svg viewBox="0 0 24 24"><path d="M12 4.293l7.707 7.707-1.414 1.414L13 8.121V20h-2V8.121l-5.293 5.293-1.414-1.414L12 4.293z"/></svg>`;
 
+  // ご指定の公式URLをセット
+  const urlX = 'https://x.com/ORBG_IBARAKI';
+  const urlYouTube = 'https://www.youtube.com/@ORBGARDEN/videos';
+  const urlTikTok = 'https://www.tiktok.com/@orb_garden?_t=ZS-8zfGGjCOhb6&_r=1';
+
   const footerHTML = `
     <footer class="footer">
       <div class="container">
@@ -11,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- PC版レイアウト -->
         <div class="footer-pc-layout">
           <div class="footer-sns-group">
-            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="X (Twitter)">${svgX}</a>
-            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="YouTube">${svgYouTube}</a>
-            <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="TikTok">${svgTikTok}</a>
+            <a href="${urlX}" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="X (Twitter)">${svgX}</a>
+            <a href="${urlYouTube}" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="YouTube">${svgYouTube}</a>
+            <a href="${urlTikTok}" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="TikTok">${svgTikTok}</a>
           </div>
           <ul class="footer-links-group">
             <li><a href="footer/privacy.html">プライバシーポリシー</a></li>
@@ -27,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- スマホ版レイアウト -->
         <div class="footer-mobile-only">
           <div class="footer-sns-group-mobile">
-            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="X">${svgX}</a>
-            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="YouTube">${svgYouTube}</a>
-            <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="TikTok">${svgTikTok}</a>
+            <a href="${urlX}" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="X">${svgX}</a>
+            <a href="${urlYouTube}" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="YouTube">${svgYouTube}</a>
+            <a href="${urlTikTok}" target="_blank" rel="noopener noreferrer" class="footer-sns-icon" aria-label="TikTok">${svgTikTok}</a>
           </div>
           <ul class="footer-links-group-mobile">
             <li><a href="footer/privacy.html">プライバシーポリシー</a></li>
