@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ORB GARDEN | 茨城発のeスポーツチーム</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- CSSファイルを共通とトップ専用の2つに分割して読み込み -->
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/top.css">
 </head>
 <body>
 
@@ -41,7 +43,7 @@
         <!-- 最新ニュース (大1件) -->
         <article class="news-main-card">
           <div class="news-thumb-box">
-            <img src="assets/images/sample-news1.jpg" alt="ニュースサムネイル" onerror="this.style.background='#222'">
+            <img src="assets/images/sample-news1.jpg" alt="ニュースサムネイル" onerror="this.style.background='#1a222d'">
           </div>
           <div class="news-main-content">
             <div class="news-meta">
@@ -56,7 +58,7 @@
         <div class="news-sub-grid">
           <article class="news-sub-card">
             <div class="news-thumb-box">
-              <img src="assets/images/sample-news2.jpg" alt="ニュースサムネイル" onerror="this.style.background='#222'">
+              <img src="assets/images/sample-news2.jpg" alt="ニュースサムネイル" onerror="this.style.background='#1a222d'">
             </div>
             <div class="news-sub-content">
               <div class="news-meta">
@@ -69,7 +71,7 @@
 
           <article class="news-sub-card">
             <div class="news-thumb-box">
-              <img src="assets/images/sample-news3.jpg" alt="ニュースサムネイル" onerror="this.style.background='#222'">
+              <img src="assets/images/sample-news3.jpg" alt="ニュースサムネイル" onerror="this.style.background='#1a222d'">
             </div>
             <div class="news-sub-content">
               <div class="news-meta">
@@ -82,7 +84,7 @@
 
           <article class="news-sub-card">
             <div class="news-thumb-box">
-              <img src="assets/images/sample-news4.jpg" alt="ニュースサムネイル" onerror="this.style.background='#222'">
+              <img src="assets/images/sample-news4.jpg" alt="ニュースサムネイル" onerror="this.style.background='#1a222d'">
             </div>
             <div class="news-sub-content">
               <div class="news-meta">
@@ -101,7 +103,7 @@
     </div>
   </section>
 
-  <!-- MEMBER (CR風カテゴリ切替機能付き) -->
+  <!-- MEMBER (CR風カテゴリ切替) -->
   <section class="member">
     <div class="container">
       <h2 class="section-title">MEMBERS</h2>
@@ -120,7 +122,7 @@
         
         <a href="member.html#valo1" class="member-card" data-category="valorant">
           <div class="member-thumb-box">
-            <img src="assets/images/member-valo1.jpg" alt="VALORANT Player 1" onerror="this.style.background='#222'">
+            <img src="assets/images/member-valo1.jpg" alt="VALORANT Player" onerror="this.style.background='#1a222d'">
           </div>
           <div class="member-role">VALORANT DIV.</div>
           <div class="member-name">Player Name</div>
@@ -128,7 +130,7 @@
 
         <a href="member.html#apex1" class="member-card" data-category="apex">
           <div class="member-thumb-box">
-            <img src="assets/images/member-apex1.jpg" alt="APEX Player 1" onerror="this.style.background='#222'">
+            <img src="assets/images/member-apex1.jpg" alt="APEX Player" onerror="this.style.background='#1a222d'">
           </div>
           <div class="member-role">APEX LEGENDS DIV.</div>
           <div class="member-name">Player Name</div>
@@ -136,7 +138,7 @@
 
         <a href="member.html#junpeach" class="member-card" data-category="streamer">
           <div class="member-thumb-box">
-            <img src="assets/images/member1.jpg" alt="じゅんぴーち" onerror="this.style.background='#222'">
+            <img src="assets/images/member1.jpg" alt="じゅんぴーち" onerror="this.style.background='#1a222d'">
           </div>
           <div class="member-role">STREAMER</div>
           <div class="member-name">じゅんぴーち</div>
@@ -144,7 +146,7 @@
 
         <a href="member.html#zaki" class="member-card" data-category="streamer">
           <div class="member-thumb-box">
-            <img src="assets/images/member2.jpg" alt="ザキ" onerror="this.style.background='#222'">
+            <img src="assets/images/member2.jpg" alt="ザキ" onerror="this.style.background='#1a222d'">
           </div>
           <div class="member-role">STREAMER</div>
           <div class="member-name">ザキ</div>
@@ -152,7 +154,7 @@
 
         <a href="member.html#machi" class="member-card" data-category="streamer">
           <div class="member-thumb-box">
-            <img src="assets/images/member3.jpg" alt="まち" onerror="this.style.background='#222'">
+            <img src="assets/images/member3.jpg" alt="まち" onerror="this.style.background='#1a222d'">
           </div>
           <div class="member-role">STREAMER</div>
           <div class="member-name">まち</div>
@@ -160,7 +162,7 @@
 
         <a href="member.html#kurusu" class="member-card" data-category="staff">
           <div class="member-thumb-box">
-            <img src="assets/images/member4.jpg" alt="クルス" onerror="this.style.background='#222'">
+            <img src="assets/images/member4.jpg" alt="クルス" onerror="this.style.background='#1a222d'">
           </div>
           <div class="member-role">STAFF</div>
           <div class="member-name">クルス</div>
@@ -211,7 +213,7 @@
       <div class="service-grid">
         <div class="service-card">
           <div class="service-thumb">
-            <img src="assets/images/service1.jpg" alt="イベント出展" onerror="this.style.background='#222'">
+            <img src="assets/images/service1.jpg" alt="イベント出展" onerror="this.style.background='#1a222d'">
           </div>
           <div class="service-content">
             <h3>eスポーツブース出展 / 大会運営</h3>
@@ -220,7 +222,7 @@
         </div>
         <div class="service-card">
           <div class="service-thumb">
-            <img src="assets/images/service2.jpg" alt="デザイン制作" onerror="this.style.background='#222'">
+            <img src="assets/images/service2.jpg" alt="デザイン制作" onerror="this.style.background='#1a222d'">
           </div>
           <div class="service-content">
             <h3>デザイン・動画制作</h3>
@@ -229,7 +231,7 @@
         </div>
         <div class="service-card">
           <div class="service-thumb">
-            <img src="assets/images/service3.jpg" alt="講師委託" onerror="this.style.background='#222'">
+            <img src="assets/images/service3.jpg" alt="講師委託" onerror="this.style.background='#1a222d'">
           </div>
           <div class="service-content">
             <h3>講師・コーチング委託</h3>
@@ -243,15 +245,26 @@
     </div>
   </section>
 
-  <!-- SPONSORS -->
+  <!-- SPONSORS (ロゴ画像表示 ＆ スポンサーページへの誘導ボタン) -->
   <section class="sponsor">
     <div class="container">
       <h2 class="section-title">SPONSORS</h2>
       <div class="sponsor-grid">
-        <div class="sponsor-item">株式会社 斎藤英次商店</div>
-        <div class="sponsor-item">eプリントサービス</div>
-        <div class="sponsor-item">菊地蓮根</div>
-        <div class="sponsor-item">カーマッチ茨城日立店</div>
+        <div class="sponsor-item">
+          <img src="assets/images/sponsor-saito.png" alt="株式会社 斎藤英次商店" onerror="this.style.display='none'; this.parentNode.innerText='斎藤英次商店';">
+        </div>
+        <div class="sponsor-item">
+          <img src="assets/images/sponsor-eprint.png" alt="eプリントサービス" onerror="this.style.display='none'; this.parentNode.innerText='eプリントサービス';">
+        </div>
+        <div class="sponsor-item">
+          <img src="assets/images/sponsor-kikuchi.png" alt="菊地蓮根" onerror="this.style.display='none'; this.parentNode.innerText='菊地蓮根';">
+        </div>
+        <div class="sponsor-item">
+          <img src="assets/images/sponsor-carmatch.png" alt="カーマッチ茨城日立店" onerror="this.style.display='none'; this.parentNode.innerText='カーマッチ茨城日立店';">
+        </div>
+      </div>
+      <div class="btn-center">
+        <a href="sponsor.html" class="btn-primary">スポンサー一覧・概要はこちら</a>
       </div>
     </div>
   </section>
