@@ -1,0 +1,150 @@
+/* ==========================================
+   SPONSOR ページ専用スタイル
+   ========================================== */
+
+.sponsor-page-section {
+  padding: 60px 0 100px;
+}
+
+.sponsor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 80px;
+}
+
+.sponsor-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 35px;
+  align-items: start;
+}
+
+.sponsor-logo-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--bg-sub);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.sponsor-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sponsor-info h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-main);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.sponsor-info p {
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: var(--text-main);
+  margin-bottom: 25px;
+  white-space: pre-line;
+}
+
+.sponsor-btn-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* SNS/WEB ボタン装飾 */
+.sponsor-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.sponsor-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.sponsor-btn.btn-official { background-color: #0b0f17; }
+.sponsor-btn.btn-x { background-color: #000000; }
+.sponsor-btn.btn-insta { background-color: #E4405F; }
+.sponsor-btn.btn-fb { background-color: #1877F2; }
+.sponsor-btn.btn-line { background-color: #06C755; }
+.sponsor-btn.btn-store { background-color: var(--accent-color); color: #0b0f17; }
+
+.sponsor-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  filter: brightness(1.1);
+}
+
+/* Special Thanks セクション */
+.thanks-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--bg-sub);
+  border-radius: 16px;
+  padding: 45px 40px;
+  border: 1px solid var(--border-color);
+}
+
+.thanks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.thanks-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.thanks-card h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.thanks-card p {
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 850px) {
+  .sponsor-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 25px;
+  }
+  .thanks-grid {
+    grid-template-columns: 1fr;
+  }
+}
