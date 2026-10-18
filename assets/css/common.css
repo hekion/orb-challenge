@@ -1,19 +1,19 @@
 /* ==========================================
-   基本設定・共通変数
+   基本設定・共通変数（白背景ベース×黒フッター）
    ========================================== */
 :root {
   --bg-color: #ffffff;            /* ボディ背景：白 */
-  --bg-sub: #f8fafc;              /* セクション背景：薄いグレー */
+  --bg-sub: #f8fafc;              /* セクション背景：薄グレー */
   --card-bg: #ffffff;             /* カード背景 */
-  --text-main: #0f172a;           /* メイン文字 */
-  --text-sub: #64748b;            /* サブ文字 */
-  --accent-color: #00d2ff;        /* アクセント：水色 / シアン */
+  --text-main: #0f172a;           /* メインテキスト */
+  --text-sub: #64748b;            /* サブテキスト */
+  --accent-color: #00d2ff;        /* アクセント：シアン・水色 */
   --accent-hover: #00b4d8;
   --border-color: #e2e8f0;        /* 繊細な境界線 */
   --header-bg: #0b0f17;           /* ヘッダー背景：黒 */
   --footer-bg: #070a0f;           /* フッター背景：黒 */
   
-  /* フォントスタック：視認性とプロっぽさを兼ね備えた美しいゴシック */
+  /* フォントスタック */
   --font-en: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-ja: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Meiryo, sans-serif;
   --container-width: 1200px;
