@@ -452,3 +452,61 @@ img {
     color: #ffffff;
   }
 }
+
+/* ==========================================
+   ページトップに戻るボタン (Scroll To Top)
+   ========================================== */
+.pagetop-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent-color); /* 水色 (#00d2ff) */
+  color: #0b0f17;                        /* 黒アイコン文字 */
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0, 210, 255, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pagetop-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* スクロール時に出現するクラス */
+.pagetop-btn.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.pagetop-btn:hover {
+  background-color: #ffffff;
+  color: #0b0f17;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .pagetop-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+  .pagetop-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
