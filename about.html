@@ -4,38 +4,378 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABOUT US | ORB GARDEN</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS読み込み -->
   <link rel="stylesheet" href="assets/css/common.css">
-  <style>
-    .sub-hero { padding: 60px 0; background-color: var(--header-bg); color: #fff; text-align: center; }
-    .sub-hero h1 { font-family: var(--font-en); font-size: 2.5rem; font-weight: 900; letter-spacing: 2px; }
-    .content-section { padding: 80px 0; max-width: 900px; margin: 0 auto; }
-    .content-section h2 { font-size: 1.5rem; margin-bottom: 20px; font-weight: 800; border-left: 4px solid var(--accent-color); padding-left: 15px; }
-    .content-section p { margin-bottom: 25px; line-height: 1.9; color: var(--text-main); }
-  </style>
+  <link rel="stylesheet" href="assets/css/about.css">
 </head>
 <body>
+
+  <!-- 共通ヘッダー -->
   <div id="header-placeholder"></div>
 
-  <div class="sub-hero">
+  <!-- ページヒーロー -->
+  <div class="page-hero">
     <div class="container">
       <h1>ABOUT US</h1>
     </div>
   </div>
 
-  <main class="content-section container">
-    <h2>茨城発、ストリートスタイルのeスポーツチーム</h2>
-    <p>ORB GARDENは、茨城県を拠点に全国、そして世界へ挑戦するプロフェッショナルeスポーツチームです。競技シーンにおける圧倒的な勝利を追求すると同時に、地域社会（自治体・教育機関・地元企業）との強固なタイアップを通じて、次世代の育成とeスポーツ文化の普及に貢献します。</p>
-    
-    <h2>チーム理念</h2>
-    <p><strong>1. 競技の極限への挑戦</strong><br>プロフェッショナルとしての自覚を持ち、国内外の主要大会で常に上位入賞を目指します。</p>
-    <p><strong>2. 地域社会との共生（Regional Revitalization）</strong><br>茨城の魅力を発信し、イベントや教育現場へのコーチングを通じて、地域を元気にします。</p>
-    <p><strong>3. カルチャーの発信</strong><br>ゲームの枠を超え、アパレルやデザイン、クリエイティブ領域からストリートカルチャーを発信します。</p>
-  </main>
+  <!-- ABOUT 文章セクション -->
+  <section class="about-card-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="en">ABOUT US</span>
+        <span class="ja">チーム理念・概要</span>
+      </h2>
+      <div class="about-text-card">
+        ORB GARDENは、茨城県を拠点に活動するストリートスタイルのeスポーツチームです。<br>
+        競技シーンでの勝利と地域社会への貢献を両立することを理念に、<br>
+        次世代のプレイヤー育成とeスポーツ文化の発展に取り組んでいます。<br>
+        国内外の大会出場やコンテンツ制作を通じて高い競技力と発信力を磨きながら、<br>
+        教育機関・企業・自治体との連携によるイベント運営や人材育成にも注力しています。<br>
+        選手・ストリーマー・クリエイターと共に、eスポーツを通じて人と地域、<br>
+        未来をつなぐ存在を目指しています。
+      </div>
+    </div>
+  </section>
 
+  <!-- HISTORY セクション -->
+  <section class="history-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="en">HISTORY</span>
+        <span class="ja">チーム沿革</span>
+      </h2>
+
+      <div class="timeline-container">
+
+        <!-- 2020年 -->
+        <div class="timeline-year-group">
+          <div class="timeline-year-title">2020</div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">06.01</div>
+            <div class="timeline-content">アマチュアとしてORB Garden Gaming, 並びに Rainbow Six Siege部門 設立</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">06.30</div>
+            <div class="timeline-content">R6S部門 ORB Garden Gaming 解散</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">07.01</div>
+            <div class="timeline-content">VALORANT部門 ORB Garden ICE 設立</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">07.09</div>
+            <div class="timeline-content">R6S部門 ORB Garden ETOILE 設立</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">07.11</div>
+            <div class="timeline-content">R6S部門 ORB Garden ideal 設立</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">08.05</div>
+            <div class="timeline-content">R6S部門 ORB Garden Animaux 「10Feet」から移籍加入</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">08.15</div>
+            <div class="timeline-content">R6S部門 3チーム合同イベント ORB Garden 解体新書 カニバルカーニバル開催</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">09.19</div>
+            <div class="timeline-content">R6S部門 Rainbow Six Japan Championship 2020 出場（結果 Best34）、R6S部門 ORB Garden Animaux 解散</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">10.04</div>
+            <div class="timeline-content">PUBG部門 ORB Garden NEKOGUMI 設立</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">11.17</div>
+            <div class="timeline-content">VALORANT部門 ORB Garden ICE 解散</div>
+          </div>
+        </div>
+
+        <!-- 2021年 -->
+        <div class="timeline-year-group">
+          <div class="timeline-year-title">2021</div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">01.01</div>
+            <div class="timeline-content">VALORANT部門 ORB Garden Mut 設立</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">01.02</div>
+            <div class="timeline-content">PUBG部門 ORB Garden NEKOGUMI から ORB Garden Glanz に改名</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">01.23</div>
+            <div class="timeline-content">茨城県の地域密着型チーム定着を目的として ORB Garden Gaming から ORB GARDEN IBARAKI に改名</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">01.24</div>
+            <div class="timeline-content">株式会社テックライン様、合同会社Endian様とスポンサー契約 / New Side Chapter とパートナーシップ契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">01.30</div>
+            <div class="timeline-content">PUBG部門 PUBG JAPAN CHALLENGE 2021 出場（結果 Best37）</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">02.20</div>
+            <div class="timeline-content">IBARAKI eSPORTS STUDIOにて「ORB Garden ideaL vs CTGいぶし銀」エキシビジョンマッチ開催</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">02.23</div>
+            <div class="timeline-content">ApexLegends部門 ORB Garden SEEKER 設立</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">02.27 - 28</div>
+            <div class="timeline-content">ORB GARDEN IBARAKI主催で ANATOMY CUP R6S 大会を開催</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">03.31</div>
+            <div class="timeline-content">R6S部門 ORB Garden ideal, ORB Garden ETOILE, PUBG部門 ORB Garden Glanz 解散</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">04.11</div>
+            <div class="timeline-content">R6S部門 ORB Garden Fade 設立</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">05.08</div>
+            <div class="timeline-content">R6S部門 Rainbow Six Japan Open 2021 season1 出場（結果 Best32）</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">06.28</div>
+            <div class="timeline-content">VALORANT部門 VALORANT CHAMPIONS TOUR 2021 出場（結果 Best28）</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">07.06</div>
+            <div class="timeline-content">ApexLegends部門 FFL APEX #3 出場（結果 34位）</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">08.10</div>
+            <div class="timeline-content">ApexLegends部門 FFL APEX #4 出場（結果 37位）</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">08.15</div>
+            <div class="timeline-content">VALORANT部門 ORB GARDEN Mut 解散</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">11.14</div>
+            <div class="timeline-content">「ORB GARDEN IBARAKI」から「ORB GARDEN」へ名称とロゴをリブランディング / 全競技部門の活動休止</div>
+          </div>
+        </div>
+
+        <!-- 2022年 -->
+        <div class="timeline-year-group">
+          <div class="timeline-year-title">2022</div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">01.15</div>
+            <div class="timeline-content">豪華出場者と豪華協賛による「ANATOMY CUP DUO MONSTER」をApexLegendsで開催</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">07.17</div>
+            <div class="timeline-content">豪華配信活動者による「ANATOMY CUP 王者決定戦」をApexLegendsで2度目の開催</div>
+          </div>
+        </div>
+
+        <!-- 2023年 -->
+        <div class="timeline-year-group">
+          <div class="timeline-year-title">2023</div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">06.01</div>
+            <div class="timeline-content">設立3周年記念として茨城県小美玉市のRISEe様と運営業務提携の契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">07.28</div>
+            <div class="timeline-content">eスポーツ施設 RISEe にてスプラトゥーン3のコミュニティ対戦会「ORBRISE CUP」を開催</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">08.04</div>
+            <div class="timeline-content">中市 雄介公認会計士/税理士様とスポンサーシップ契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">08.17</div>
+            <div class="timeline-content">株式会社ビジネス・インフォメーション・テクノロジー【eプリントサービス】様とスポンサーシップ契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">10.31</div>
+            <div class="timeline-content">VALORANTでのハロウィン企画として「VALOweenNight Vol.2」を開催</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">11.04</div>
+            <div class="timeline-content">Minecraftデータパック制作チーム Panilla様とスポンサーシップ契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">12.25</div>
+            <div class="timeline-content">全国コンビニのマルチコピー機「eプリントサービス」からストリーマーのブロマイドが発売</div>
+          </div>
+        </div>
+
+        <!-- 2024年 -->
+        <div class="timeline-year-group">
+          <div class="timeline-year-title">2024</div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">01.15</div>
+            <div class="timeline-content">株式会社斎藤英次商店様とスポンサーシップ契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">01.28</div>
+            <div class="timeline-content">ORB GARDENの公式グッズがBOOTHで発売</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">02.14</div>
+            <div class="timeline-content">VALORANTのバレンタインデー企画として「男子禁制ばろらんと」を開催</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">03.19</div>
+            <div class="timeline-content">VALORANT部門が約2年7カ月ぶりに再設立 / 競技部門の活動再開</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">03.19</div>
+            <div class="timeline-content">仁瓦堂株式会社様とスポンサーシップ契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">03.24</div>
+            <div class="timeline-content">菊地蓮根様とスポンサーシップ契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">03.26</div>
+            <div class="timeline-content">筑波大学主催eスポーツフェス「OWL FES 2024」にVALORANT競技部門とストリーマーが出演</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">06.23</div>
+            <div class="timeline-content">VALORANT部門でトライアウトを実施</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">08.03</div>
+            <div class="timeline-content">実穀ふれあいセンター少年少女チャレンジ教室にてeスポーツ体験授業を実施</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">10.01</div>
+            <div class="timeline-content">eスポーツ系ニュースサイト jogoses とパートナーシップ連携を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">10.06</div>
+            <div class="timeline-content">飛鳥未来きぼう高校（水戸本校）と講師業務の提携契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">10.31</div>
+            <div class="timeline-content">配信者大会 VALOweenNight Vol.3 を開催</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">12.02</div>
+            <div class="timeline-content">第43回 高萩市産業祭にeスポーツブースとして出展/体験会実施</div>
+          </div>
+        </div>
+
+        <!-- 2025年 -->
+        <div class="timeline-year-group">
+          <div class="timeline-year-title">2025</div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">02.21</div>
+            <div class="timeline-content">第2回 実穀ふれあいセンター eスポーツ体験教室を実施</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">03.01</div>
+            <div class="timeline-content">VALORANT部門が新体制を発足、IBARAKI GAMING DAY 2025にブース出展</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">04.15</div>
+            <div class="timeline-content">ApexLegends部門再設立 / ALGS Year5 ProLeague Split1 出場</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">05.02</div>
+            <div class="timeline-content">ApexLegends部門、米国ニューオーリンズ世界大会 ALGS OPEN 出場（127位）</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">07.14</div>
+            <div class="timeline-content">VALORANT部門 新体制を発足、新メンバー加入</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">07.25</div>
+            <div class="timeline-content">関係者向けシューティングeスポーツ講義・交流会を実施</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">07.26</div>
+            <div class="timeline-content">マインクラフトのストリーマーサーバー「おぶクラっ」開幕</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">11.16</div>
+            <div class="timeline-content">第44回 高萩市産業祭 eスポーツエリア ステージイベント運営/出演</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">12.03</div>
+            <div class="timeline-content">設立5周年を記念してUmipad ストアからチーム監修のマウスパッド「GODDESS」を発売</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">12.04</div>
+            <div class="timeline-content">VALORANT部門が株式会社カルモア様と香りの検証を目的としてAIM池袋本店にてブートキャンプを実施</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">12.21</div>
+            <div class="timeline-content">阿見町中央公民館 eスポーツ体験会運営出演</div>
+          </div>
+        </div>
+
+        <!-- 2026年 -->
+        <div class="timeline-year-group">
+          <div class="timeline-year-title">2026</div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">01.15</div>
+            <div class="timeline-content">マインクラフトのストリーマーサーバー「おぶクラっ」シーズン2開幕</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">02.11</div>
+            <div class="timeline-content">IBARAKI GAMING DAY 2026 ブース出展 / じゅんぴーちがトークショー出演</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">03.05</div>
+            <div class="timeline-content">ORB GARDEN 監修のマウスパッド「GODDESS」をTsukubaSolidState様へサンプル提供</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">03.14</div>
+            <div class="timeline-content">VALORANT部門 RS CUP 出場</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">04.01</div>
+            <div class="timeline-content">カーマッチ茨城日立店とスポンサーシップ契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">04.01</div>
+            <div class="timeline-content">つくばビジネスカレッジ専門学校と業務提携契約を締結</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">06.23</div>
+            <div class="timeline-content">ApexLegends競技部門 ALGS Year 6 Split 2 APAC-North Pro League Qualifier 出場</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">07.25</div>
+            <div class="timeline-content">ApexLegends競技部門 ALGS Year 6 Split 2 APAC-North Pro League 昇格</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">08.09</div>
+            <div class="timeline-content">ApexLegends競技部門プロリーグ出場に際し、限定ユニフォーム販売</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 共通フッター -->
   <div id="footer-placeholder"></div>
+
+  <!-- JS読み込み -->
   <script src="assets/js/header.js"></script>
   <script src="assets/js/footer.js"></script>
 </body>
