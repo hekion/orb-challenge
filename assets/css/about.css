@@ -1,0 +1,162 @@
+/* ==========================================
+   ABOUT ページ専用スタイル
+   ========================================== */
+
+/* ページヒーロー */
+.page-hero {
+  background-color: var(--header-bg);
+  color: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-family: var(--font-en);
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+/* ABOUT 文章エリア */
+.about-card-section {
+  padding: 80px 0 60px;
+}
+
+.about-text-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 45px 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 2.1;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  font-weight: 500;
+  word-break: break-all;
+}
+
+/* HISTORY タイムライン構造 */
+.history-section {
+  padding: 60px 0 100px;
+  background-color: var(--bg-sub);
+}
+
+.timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* タイムラインの中央線 */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 140px;
+  width: 2px;
+  background-color: var(--accent-color);
+}
+
+.timeline-year-group {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-year-title {
+  font-family: var(--font-en);
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 25px;
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #0b0f17;
+  padding: 4px 18px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 210, 255, 0.2);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* タイムライン上のドット */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 136px;
+  top: 8px;
+  width: 100px;
+  height: 10px;
+  width: 10px;
+  background-color: #0b0f17;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-date {
+  width: 120px;
+  flex-shrink: 0;
+  font-family: var(--font-en);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--accent-color);
+  text-align: right;
+  padding-right: 30px;
+}
+
+.timeline-content {
+  background: #ffffff;
+  padding: 14px 22px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-left: 30px;
+}
+
+/* レスポンシブ対応（スマホ表示時） */
+@media (max-width: 768px) {
+  .about-text-card {
+    padding: 25px 20px;
+    font-size: 0.98rem;
+    line-height: 1.9;
+  }
+
+  .timeline-container::before {
+    left: 15px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    padding-left: 35px;
+  }
+
+  .timeline-item::before {
+    left: 11px;
+    top: 4px;
+  }
+
+  .timeline-date {
+    width: auto;
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+  }
+
+  .timeline-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}
