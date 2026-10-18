@@ -40,7 +40,7 @@
     </div>
   </section>
 
-  <!-- INFORMATION (NEWS) -->
+  <!-- INFORMATION (NEWS) JSでnews-data.jsから自動読み込み -->
   <section class="news bg-sub">
     <div class="container">
       <h2 class="section-title">
@@ -49,61 +49,11 @@
       </h2>
       <div class="news-container">
         
-        <!-- 最新ニュース (大1件) -->
-        <article class="news-main-card">
-          <div class="news-thumb-box">
-            <img src="assets/images/sample-news1.jpg" alt="ニュースサムネイル" onerror="this.style.background='#cbd5e1'">
-          </div>
-          <div class="news-main-content">
-            <div class="news-meta">
-              <span class="news-date">2026.10.14</span>
-              <span class="news-tag">MEDIA</span>
-            </div>
-            <h3 class="news-title">茨城県教育委員会公式サイト「おしえて ふれあちゃん！」にORB GARDENが掲載されました！</h3>
-          </div>
-        </article>
+        <!-- 最新ニュース (1番目の記事が全自動で描画されます) -->
+        <div id="topMainNews"></div>
 
-        <!-- 2〜4番目のニュース (小3件横並び) -->
-        <div class="news-sub-grid">
-          <article class="news-sub-card">
-            <div class="news-thumb-box">
-              <img src="assets/images/sample-news2.jpg" alt="ニュースサムネイル" onerror="this.style.background='#cbd5e1'">
-            </div>
-            <div class="news-sub-content">
-              <div class="news-meta">
-                <span class="news-date">2026.10.01</span>
-                <span class="news-tag">TEAM</span>
-              </div>
-              <h4 class="news-title">APEX競技部門 新メンバー加入のお知らせ</h4>
-            </div>
-          </article>
-
-          <article class="news-sub-card">
-            <div class="news-thumb-box">
-              <img src="assets/images/sample-news3.jpg" alt="ニュースサムネイル" onerror="this.style.background='#cbd5e1'">
-            </div>
-            <div class="news-sub-content">
-              <div class="news-meta">
-                <span class="news-date">2026.09.01</span>
-                <span class="news-tag">SPONSOR</span>
-              </div>
-              <h4 class="news-title">【お知らせ】スポンサー契約継続のお知らせ</h4>
-            </div>
-          </article>
-
-          <article class="news-sub-card">
-            <div class="news-thumb-box">
-              <img src="assets/images/sample-news4.jpg" alt="ニュースサムネイル" onerror="this.style.background='#cbd5e1'">
-            </div>
-            <div class="news-sub-content">
-              <div class="news-meta">
-                <span class="news-date">2026.08.09</span>
-                <span class="news-tag">GOODS</span>
-              </div>
-              <h4 class="news-title">ApexLegendsプロリーグ出場記念 限定ユニフォーム販売開始</h4>
-            </div>
-          </article>
-        </div>
+        <!-- サブニュース (2〜4番目の記事が全自動で描画されます) -->
+        <div class="news-sub-grid" id="topSubNews"></div>
 
       </div>
       <div class="btn-center">
@@ -112,7 +62,7 @@
     </div>
   </section>
 
-  <!-- MEMBER (初期表示 STREAMER スタート) -->
+  <!-- MEMBER (初期表示 STREAMER スタート / ALLなし) -->
   <section class="member">
     <div class="container">
       <h2 class="section-title">
@@ -120,7 +70,7 @@
         <span class="ja">所属メンバー</span>
       </h2>
       
-      <!-- カテゴリ切り替えタブ（初期選択: STREAMER / ALLなし） -->
+      <!-- カテゴリ切り替えタブ（初期選択: STREAMER） -->
       <div class="member-tabs">
         <button class="tab-btn active" data-category="streamer">STREAMER</button>
         <button class="tab-btn" data-category="valorant">VALORANT</button>
@@ -138,7 +88,7 @@
             <h3 class="member-name">じゅんぴーち</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-junpeach.jpg" alt="じゅんぴーち" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-junpeach.jpg" alt="じゅんぴーち" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -147,7 +97,7 @@
             <h3 class="member-name">ザキ</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-zaki.jpg" alt="ザキ" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-zaki.jpg" alt="ザキ" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -156,7 +106,7 @@
             <h3 class="member-name">なち</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-nachi.jpg" alt="なち" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-nachi.jpg" alt="なち" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -165,7 +115,7 @@
             <h3 class="member-name">白熊アイス</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-shirokuma.jpg" alt="白熊アイス" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-shirokuma.jpg" alt="白熊アイス" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -174,7 +124,7 @@
             <h3 class="member-name">おぴろやん</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-opiroyan.jpg" alt="おぴろやん" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-opiroyan.jpg" alt="おぴろやん" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -183,7 +133,7 @@
             <h3 class="member-name">るとですぽん</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-rutodesupon.jpg" alt="るとですぽん" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-rutodesupon.jpg" alt="るとですぽん" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -192,7 +142,7 @@
             <h3 class="member-name">もなりざ</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-monariza.jpg" alt="もなりざ" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-monariza.jpg" alt="もなりざ" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -205,7 +155,7 @@
             <h3 class="member-name">クルス</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-kurusu.jpg" alt="クルス" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-kurusu.jpg" alt="クルス" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -214,7 +164,7 @@
             <h3 class="member-name">mumurumuru</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-mumurumuru.jpg" alt="mumurumuru" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-mumurumuru.jpg" alt="mumurumuru" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -223,7 +173,7 @@
             <h3 class="member-name">ぴょなか</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-pyonaka.jpg" alt="ぴょなか" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-pyonaka.jpg" alt="ぴょなか" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -233,7 +183,7 @@
             <h3 class="member-name">サチエ</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-sachie.jpg" alt="サチエ" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-sachie.jpg" alt="サチエ" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -243,7 +193,7 @@
             <h3 class="member-name">Dex</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-dex.jpg" alt="Dex" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-dex.jpg" alt="Dex" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -252,7 +202,7 @@
             <h3 class="member-name">Aurora</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-aurora.jpg" alt="Aurora" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-aurora.jpg" alt="Aurora" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -261,7 +211,7 @@
             <h3 class="member-name">Gyeol</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-gyeol.jpg" alt="Gyeol" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-gyeol.jpg" alt="Gyeol" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -270,7 +220,7 @@
             <h3 class="member-name">Edan (Coach)</h3>
           </div>
           <div class="member-thumb-box">
-            <img src="assets/images/member-edan.jpg" alt="Edan" onerror="this.style.background='#1e293b'">
+            <img src="assets/images/member/member-edan.jpg" alt="Edan" onerror="this.style.background='#1e293b'">
           </div>
         </a>
 
@@ -309,7 +259,7 @@
         </div>
       </div>
       <div class="btn-center">
-        <a href="https://m.youtube.com/@ORBGARDEN/videos" target="_blank" rel="noopener noreferrer" class="btn-primary">YouTubeチャンネルはこちら</a>
+        <a href="https://www.youtube.com/@ORBGARDEN/videos" target="_blank" rel="noopener noreferrer" class="btn-primary">YouTubeチャンネルはこちら</a>
       </div>
     </div>
   </section>
@@ -318,7 +268,7 @@
   <div class="store-banner-section">
     <div class="container">
       <a href="https://orbgarden.booth.pm/" target="_blank" rel="noopener noreferrer" class="store-banner-link">
-        <img src="assets/images/store-banner.jpg" alt="ORB GARDEN OFFICIAL STORE" onerror="this.style.background='#0b0f17'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<span style=\'color:#00d2ff; font-weight:900; font-size:1.5rem; font-family:Montserrat;\'>ORB GARDEN OFFICIAL STORE ↗</span>';">
+        <img src="assets/images/other/store-banner.jpg" alt="ORB GARDEN OFFICIAL STORE" onerror="this.style.background='#0b0f17'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<span style=\'color:#00d2ff; font-weight:900; font-size:1.5rem; font-family:Montserrat;\'>ORB GARDEN OFFICIAL STORE ↗</span>';">
       </a>
     </div>
   </div>
@@ -333,7 +283,7 @@
       <div class="service-grid">
         <div class="service-card">
           <div class="service-thumb">
-            <img src="assets/images/service1.jpg" alt="イベント出展" onerror="this.style.background='#cbd5e1'">
+            <img src="assets/images/other/service1.jpg" alt="イベント出展" onerror="this.style.background='#cbd5e1'">
           </div>
           <div class="service-content">
             <h3>eスポーツブース出展 / 大会運営</h3>
@@ -342,7 +292,7 @@
         </div>
         <div class="service-card">
           <div class="service-thumb">
-            <img src="assets/images/service2.jpg" alt="デザイン制作" onerror="this.style.background='#cbd5e1'">
+            <img src="assets/images/other/service2.jpg" alt="デザイン制作" onerror="this.style.background='#cbd5e1'">
           </div>
           <div class="service-content">
             <h3>デザイン・動画制作</h3>
@@ -351,7 +301,7 @@
         </div>
         <div class="service-card">
           <div class="service-thumb">
-            <img src="assets/images/service3.jpg" alt="講師委託" onerror="this.style.background='#cbd5e1'">
+            <img src="assets/images/other/service3.jpg" alt="講師委託" onerror="this.style.background='#cbd5e1'">
           </div>
           <div class="service-content">
             <h3>講師・コーチング委託</h3>
@@ -374,13 +324,13 @@
       </h2>
       <div class="sponsor-grid">
         <div class="sponsor-item">
-          <img src="assets/images/sponsor-saito.png" alt="株式会社 斎藤英次商店" onerror="this.style.display='none'; this.parentNode.innerText='斎藤英次商店';">
+          <img src="assets/images/sponsor/sponsor-saito.png" alt="株式会社 斎藤英次商店" onerror="this.style.display='none'; this.parentNode.innerText='斎藤英次商店';">
         </div>
         <div class="sponsor-item">
-          <img src="assets/images/sponsor-eprint.png" alt="eプリントサービス" onerror="this.style.display='none'; this.parentNode.innerText='eプリントサービス';">
+          <img src="assets/images/sponsor/sponsor-eprint.png" alt="eプリントサービス" onerror="this.style.display='none'; this.parentNode.innerText='eプリントサービス';">
         </div>
         <div class="sponsor-item">
-          <img src="assets/images/sponsor-kikuchi.png" alt="菊地蓮根" onerror="this.style.display='none'; this.parentNode.innerText='菊地蓮根';">
+          <img src="assets/images/sponsor/sponsor-kikuchi.png" alt="菊地蓮根" onerror="this.style.display='none'; this.parentNode.innerText='菊地蓮根';">
         </div>
         <div class="sponsor-item">
           <img src="assets/images/sponsor-astas.png" alt="アスタス" onerror="this.style.display='none'; this.parentNode.innerText='アスタス';">
@@ -402,6 +352,7 @@
   <div id="footer-placeholder"></div>
 
   <!-- JS読み込み -->
+  <script src="assets/js/news-data.js"></script>
   <script src="assets/js/header.js"></script>
   <script src="assets/js/footer.js"></script>
   <script src="assets/js/main.js"></script>
