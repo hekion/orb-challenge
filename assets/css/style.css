@@ -465,3 +465,10 @@ section {
     flex-direction: column;
   }
 }
+
+@media (max-width: 768px) {
+  .nav-list.active {
+    display: flex !important;
+  }
+}
+
