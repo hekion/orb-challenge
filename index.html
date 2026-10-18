@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- 共通ヘッダー挿入位置 -->
+  <!-- 共通ヘッダー -->
   <div id="header-placeholder"></div>
 
   <!-- メインビジュアル -->
@@ -32,15 +32,17 @@
     </div>
   </section>
 
-  <!-- NEWS -->
+  <!-- INFORMATION (NEWS) -->
   <section class="news">
     <div class="container">
-      <h2 class="section-title">LATEST NEWS</h2>
+      <h2 class="section-title">INFORMATION</h2>
       <div class="news-container">
         
         <!-- 最新ニュース (大1件) -->
         <article class="news-main-card">
-          <div class="news-img"></div>
+          <div class="news-thumb-box">
+            <img src="assets/images/sample-news1.jpg" alt="ニュースサムネイル" onerror="this.style.background='#222'">
+          </div>
           <div class="news-main-content">
             <div class="news-meta">
               <span class="news-date">2026.10.14</span>
@@ -53,7 +55,9 @@
         <!-- 2〜4番目のニュース (小3件横並び) -->
         <div class="news-sub-grid">
           <article class="news-sub-card">
-            <div class="news-img"></div>
+            <div class="news-thumb-box">
+              <img src="assets/images/sample-news2.jpg" alt="ニュースサムネイル" onerror="this.style.background='#222'">
+            </div>
             <div class="news-sub-content">
               <div class="news-meta">
                 <span class="news-date">2026.10.01</span>
@@ -64,7 +68,9 @@
           </article>
 
           <article class="news-sub-card">
-            <div class="news-img"></div>
+            <div class="news-thumb-box">
+              <img src="assets/images/sample-news3.jpg" alt="ニュースサムネイル" onerror="this.style.background='#222'">
+            </div>
             <div class="news-sub-content">
               <div class="news-meta">
                 <span class="news-date">2026.09.01</span>
@@ -75,7 +81,9 @@
           </article>
 
           <article class="news-sub-card">
-            <div class="news-img"></div>
+            <div class="news-thumb-box">
+              <img src="assets/images/sample-news4.jpg" alt="ニュースサムネイル" onerror="this.style.background='#222'">
+            </div>
             <div class="news-sub-content">
               <div class="news-meta">
                 <span class="news-date">2026.08.09</span>
@@ -88,36 +96,44 @@
 
       </div>
       <div class="btn-center">
-        <a href="news.html" class="btn-primary">ニュース一覧を見る</a>
+        <a href="news.html" class="btn-primary">お知らせ一覧を見る</a>
       </div>
     </div>
   </section>
 
-  <!-- MEMBER (ピックアップ) -->
+  <!-- MEMBER (詳細に飛べるカード形式) -->
   <section class="member">
     <div class="container">
       <h2 class="section-title">PICKUP MEMBERS</h2>
       <div class="member-grid">
-        <div class="member-card">
-          <div class="member-img"></div>
+        <a href="member.html#junpeach" class="member-card">
+          <div class="member-thumb-box">
+            <img src="assets/images/member1.jpg" alt="じゅんぴーち" onerror="this.style.background='#222'">
+          </div>
           <div class="member-role">Streamer</div>
           <div class="member-name">じゅんぴーち</div>
-        </div>
-        <div class="member-card">
-          <div class="member-img"></div>
+        </a>
+        <a href="member.html#zaki" class="member-card">
+          <div class="member-thumb-box">
+            <img src="assets/images/member2.jpg" alt="ザキ" onerror="this.style.background='#222'">
+          </div>
           <div class="member-role">Streamer</div>
           <div class="member-name">ザキ</div>
-        </div>
-        <div class="member-card">
-          <div class="member-img"></div>
+        </a>
+        <a href="member.html#machi" class="member-card">
+          <div class="member-thumb-box">
+            <img src="assets/images/member3.jpg" alt="まち" onerror="this.style.background='#222'">
+          </div>
           <div class="member-role">Streamer</div>
           <div class="member-name">まち</div>
-        </div>
-        <div class="member-card">
-          <div class="member-img"></div>
+        </a>
+        <a href="member.html#kurusu" class="member-card">
+          <div class="member-thumb-box">
+            <img src="assets/images/member4.jpg" alt="クルス" onerror="this.style.background='#222'">
+          </div>
           <div class="member-role">Staff</div>
           <div class="member-name">クルス</div>
-        </div>
+        </a>
       </div>
       <div class="btn-center">
         <a href="member.html" class="btn-primary">全メンバーを見る</a>
@@ -149,28 +165,43 @@
           <div class="video-title">ORBでしか見られない企画動画</div>
         </div>
       </div>
+      <div class="btn-center">
+        <a href="https://www.youtube.com/" target="_blank" class="btn-primary">YouTubeチャンネルはこちら</a>
+      </div>
     </div>
   </section>
 
-  <!-- SERVICE / BUSINESS -->
+  <!-- SERVICE / BUSINESS (画像付き) -->
   <section class="service">
     <div class="container">
       <h2 class="section-title">CREATIVE & SERVICES</h2>
       <div class="service-grid">
         <div class="service-card">
-          <div class="service-icon">🎮</div>
-          <h3>eスポーツブース出展 / 大会運営</h3>
-          <p>体験ブースから大規模大会の制作・進行まで対応します。</p>
+          <div class="service-thumb">
+            <img src="assets/images/service1.jpg" alt="イベント出展" onerror="this.style.background='#222'">
+          </div>
+          <div class="service-content">
+            <h3>eスポーツブース出展 / 大会運営</h3>
+            <p>体験ブースから大規模大会の制作・進行まで対応します。</p>
+          </div>
         </div>
         <div class="service-card">
-          <div class="service-icon">🎨</div>
-          <h3>デザイン・動画制作</h3>
-          <p>イラスト、ロゴ、配信画面やPVなどの制作業務を承ります。</p>
+          <div class="service-thumb">
+            <img src="assets/images/service2.jpg" alt="デザイン制作" onerror="this.style.background='#222'">
+          </div>
+          <div class="service-content">
+            <h3>デザイン・動画制作</h3>
+            <p>イラスト、ロゴ、配信画面やPVなどの制作業務を承ります。</p>
+          </div>
         </div>
         <div class="service-card">
-          <div class="service-icon">🎓</div>
-          <h3>講師・コーチング委託</h3>
-          <p>学校・自治体・企業様向けのeスポーツ講習や指導を実施します。</p>
+          <div class="service-thumb">
+            <img src="assets/images/service3.jpg" alt="講師委託" onerror="this.style.background='#222'">
+          </div>
+          <div class="service-content">
+            <h3>講師・コーチング委託</h3>
+            <p>学校・自治体・企業様向けのeスポーツ講習や指導を実施します。</p>
+          </div>
         </div>
       </div>
       <div class="btn-center">
@@ -184,7 +215,7 @@
     <div class="container">
       <h2 class="section-title">SPONSORS</h2>
       <div class="sponsor-grid">
-        <div class="sponsor-item">斎藤英次商店</div>
+        <div class="sponsor-item">株式会社 斎藤英次商店</div>
         <div class="sponsor-item">eプリントサービス</div>
         <div class="sponsor-item">菊地蓮根</div>
         <div class="sponsor-item">カーマッチ茨城日立店</div>
@@ -192,7 +223,7 @@
     </div>
   </section>
 
-  <!-- 共通フッター挿入位置 -->
+  <!-- 共通フッター -->
   <div id="footer-placeholder"></div>
 
   <!-- JS読み込み -->
