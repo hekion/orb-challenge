@@ -2,23 +2,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerHTML = `
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-info">
-            <h3>ORB GARDEN</h3>
-            <p>茨城発 ストリートスタイルeスポーツチーム</p>
+        
+        <!-- PC版レイアウト -->
+        <div class="footer-pc-layout">
+          <div class="footer-sns-group">
+            <a href="https://x.com/" target="_blank">X (Twitter)</a>
+            <a href="https://youtube.com/" target="_blank">YouTube</a>
+            <a href="https://tiktok.com/" target="_blank">TikTok</a>
           </div>
-          <nav class="footer-nav">
-            <ul>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="news.html">INFO</a></li>
-              <li><a href="member.html">MEMBER</a></li>
-              <li><a href="service.html">SERVICE</a></li>
-              <li><a href="sponsor.html">SPONSOR</a></li>
-              <li><a href="contact.html">CONTACT</a></li>
-              <li><a href="https://orbgarden.booth.pm/" target="_blank">STORE</a></li>
-            </ul>
-          </nav>
+          <ul class="footer-links-group">
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+            <li><a href="fanletter.html">ファンレターとギフト</a></li>
+            <li><a href="guideline.html">配信の切り抜きルール</a></li>
+            <li><a href="legal.html">特定商取引法に関する表記</a></li>
+            <li><a href="assets.html">デジタルアセット</a></li>
+          </ul>
         </div>
+
+        <!-- スマホ版レイアウト -->
+        <div class="footer-mobile-only">
+          <div class="footer-sns-group-mobile">
+            <a href="https://x.com/" target="_blank">X</a>
+            <a href="https://youtube.com/" target="_blank">YouTube</a>
+            <a href="https://tiktok.com/" target="_blank">TikTok</a>
+          </div>
+          <ul class="footer-links-group-mobile">
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+            <li><a href="fanletter.html">ファンレターとギフト</a></li>
+            <li><a href="guideline.html">切り抜きルール</a></li>
+            <li><a href="legal.html">特商法表記</a></li>
+            <li><a href="assets.html">デジタルアセット</a></li>
+          </ul>
+          <div class="footer-team-logo">ORB GARDEN</div>
+        </div>
+
         <div class="footer-bottom">
           <p>&copy; ORB GARDEN All Rights Reserved.</p>
         </div>
@@ -26,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </footer>
   `;
 
-  // #footer-placeholder または bodyの末尾に埋め込み
   const placeholder = document.getElementById('footer-placeholder');
   if (placeholder) {
     placeholder.innerHTML = footerHTML;
