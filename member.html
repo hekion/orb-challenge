@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEMBERS | ORB GARDEN</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS読み込み -->
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/top.css">
+  <link rel="stylesheet" href="assets/css/member.css">
+</head>
+<body>
+
+  <!-- 共通ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <div class="container">
+      <h1>MEMBERS</h1>
+    </div>
+  </div>
+
+  <!-- MEMBER セクション -->
+  <section class="member member-page-section">
+    <div class="container">
+      
+      <!-- カテゴリ切り替えタブ（初期選択: ALL） -->
+      <div class="member-tabs">
+        <button class="tab-btn active" data-category="all">ALL</button>
+        <button class="tab-btn" data-category="streamer">STREAMER</button>
+        <button class="tab-btn" data-category="staff">STAFF</button>
+        <button class="tab-btn" data-category="creator">CREATOR</button>
+        <button class="tab-btn" data-category="valorant">VALORANT</button>
+        <button class="tab-btn" data-category="apex">APEX LEGENDS</button>
+      </div>
+
+      <!-- 横長メンバーカードグリッド -->
+      <div class="member-grid">
+        
+        <!-- ===== STREAMER ===== -->
+        <a href="#junpeach" class="member-card" data-category="streamer">
+          <div class="member-info"><h3 class="member-name">じゅんぴーち</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-junpeach.jpg" alt="じゅんぴーち" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#zaki" class="member-card" data-category="streamer">
+          <div class="member-info"><h3 class="member-name">ザキ</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-zaki.jpg" alt="ザキ" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#nachi" class="member-card" data-category="streamer">
+          <div class="member-info"><h3 class="member-name">なち</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-nachi.jpg" alt="なち" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#shirokuma" class="member-card" data-category="streamer">
+          <div class="member-info"><h3 class="member-name">白熊アイス</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-shirokuma.jpg" alt="白熊アイス" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#opiroyan" class="member-card" data-category="streamer">
+          <div class="member-info"><h3 class="member-name">おぴろやん</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-opiroyan.jpg" alt="おぴろやん" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#rutodesupon" class="member-card" data-category="streamer">
+          <div class="member-info"><h3 class="member-name">るとですぽん</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-rutodesupon.jpg" alt="るとですぽん" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#monariza" class="member-card" data-category="streamer">
+          <div class="member-info"><h3 class="member-name">もなりざ</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-monariza.jpg" alt="もなりざ" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+
+        <!-- ===== STAFF ===== -->
+        <a href="#kurusu" class="member-card" data-category="staff">
+          <div class="member-info"><h3 class="member-name">クルス</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-kurusu.jpg" alt="クルス" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#mumurumuru" class="member-card" data-category="staff">
+          <div class="member-info"><h3 class="member-name">mumurumuru</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-mumurumuru.jpg" alt="mumurumuru" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#pyonaka" class="member-card" data-category="staff">
+          <div class="member-info"><h3 class="member-name">ぴょなか</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-pyonaka.jpg" alt="ぴょなか" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+
+        <!-- ===== CREATOR ===== -->
+        <a href="#sachie" class="member-card" data-category="creator">
+          <div class="member-info"><h3 class="member-name">サチエ</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-sachie.jpg" alt="サチエ" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+
+        <!-- ===== VALORANT (現在不在のため空白管理用要素) ===== -->
+        <div class="member-card hide" data-category="valorant" style="display: none;"></div>
+
+
+        <!-- ===== APEX LEGENDS ===== -->
+        <a href="#dex" class="member-card" data-category="apex">
+          <div class="member-info"><h3 class="member-name">Dex</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-dex.jpg" alt="Dex" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#aurora" class="member-card" data-category="apex">
+          <div class="member-info"><h3 class="member-name">Aurora</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-aurora.jpg" alt="Aurora" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#gyeol" class="member-card" data-category="apex">
+          <div class="member-info"><h3 class="member-name">Gyeol</h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-gyeol.jpg" alt="Apex Gyeol" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+        <a href="#edan" class="member-card" data-category="apex">
+          <div class="member-info"><h3 class="member-name">Edan <span style="font-size: 1.1rem; color: var(--accent-color); margin-left: 8px;">(Coach)</span></h3></div>
+          <div class="member-thumb-box"><img src="assets/images/member-edan.jpg" alt="Edan Coach" onerror="this.style.background='#1e293b'"></div>
+        </a>
+
+      </div>
+
+      <!-- VALORANTタブ選択時に表示する「現在メンバーはいません」メッセージ用のコンテナ -->
+      <div id="emptyMessage" class="member-empty" style="display: none;">
+        現在、VALORANT部門のメンバーはいません。
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 共通フッター -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS読み込み -->
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script>
+    // member.html専用：ALL初期選択＆VALORANT空白時のメッセージ制御
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const memberCards = document.querySelectorAll('.member-card');
+      const emptyMessage = document.getElementById('emptyMessage');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const cat = btn.getAttribute('data-category');
+          let visibleCount = 0;
+
+          memberCards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (cat === 'all' || cardCat === cat) {
+              card.classList.remove('hide');
+              visibleCount++;
+            } else {
+              card.classList.add('hide');
+            }
+          });
+
+          // VALORANTなどで表示枚数が0枚の時の処理
+          if (cat === 'valorant' && visibleCount === 0) {
+            emptyMessage.style.display = 'block';
+          } else {
+            emptyMessage.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
