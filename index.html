@@ -101,42 +101,75 @@
     </div>
   </section>
 
-  <!-- MEMBER (詳細に飛べるカード形式) -->
+  <!-- MEMBER (CR風カテゴリ切替機能付き) -->
   <section class="member">
     <div class="container">
-      <h2 class="section-title">PICKUP MEMBERS</h2>
+      <h2 class="section-title">MEMBERS</h2>
+      
+      <!-- カテゴリ切り替えタブ -->
+      <div class="member-tabs">
+        <button class="tab-btn active" data-category="all">ALL</button>
+        <button class="tab-btn" data-category="valorant">VALORANT</button>
+        <button class="tab-btn" data-category="apex">APEX</button>
+        <button class="tab-btn" data-category="streamer">STREAMER</button>
+        <button class="tab-btn" data-category="staff">STAFF</button>
+      </div>
+
+      <!-- メンバーカードグリッド -->
       <div class="member-grid">
-        <a href="member.html#junpeach" class="member-card">
+        
+        <a href="member.html#valo1" class="member-card" data-category="valorant">
+          <div class="member-thumb-box">
+            <img src="assets/images/member-valo1.jpg" alt="VALORANT Player 1" onerror="this.style.background='#222'">
+          </div>
+          <div class="member-role">VALORANT DIV.</div>
+          <div class="member-name">Player Name</div>
+        </a>
+
+        <a href="member.html#apex1" class="member-card" data-category="apex">
+          <div class="member-thumb-box">
+            <img src="assets/images/member-apex1.jpg" alt="APEX Player 1" onerror="this.style.background='#222'">
+          </div>
+          <div class="member-role">APEX LEGENDS DIV.</div>
+          <div class="member-name">Player Name</div>
+        </a>
+
+        <a href="member.html#junpeach" class="member-card" data-category="streamer">
           <div class="member-thumb-box">
             <img src="assets/images/member1.jpg" alt="じゅんぴーち" onerror="this.style.background='#222'">
           </div>
-          <div class="member-role">Streamer</div>
+          <div class="member-role">STREAMER</div>
           <div class="member-name">じゅんぴーち</div>
         </a>
-        <a href="member.html#zaki" class="member-card">
+
+        <a href="member.html#zaki" class="member-card" data-category="streamer">
           <div class="member-thumb-box">
             <img src="assets/images/member2.jpg" alt="ザキ" onerror="this.style.background='#222'">
           </div>
-          <div class="member-role">Streamer</div>
+          <div class="member-role">STREAMER</div>
           <div class="member-name">ザキ</div>
         </a>
-        <a href="member.html#machi" class="member-card">
+
+        <a href="member.html#machi" class="member-card" data-category="streamer">
           <div class="member-thumb-box">
             <img src="assets/images/member3.jpg" alt="まち" onerror="this.style.background='#222'">
           </div>
-          <div class="member-role">Streamer</div>
+          <div class="member-role">STREAMER</div>
           <div class="member-name">まち</div>
         </a>
-        <a href="member.html#kurusu" class="member-card">
+
+        <a href="member.html#kurusu" class="member-card" data-category="staff">
           <div class="member-thumb-box">
             <img src="assets/images/member4.jpg" alt="クルス" onerror="this.style.background='#222'">
           </div>
-          <div class="member-role">Staff</div>
+          <div class="member-role">STAFF</div>
           <div class="member-name">クルス</div>
         </a>
+
       </div>
+
       <div class="btn-center">
-        <a href="member.html" class="btn-primary">全メンバーを見る</a>
+        <a href="member.html" class="btn-primary">全メンバーの詳細を見る</a>
       </div>
     </div>
   </section>
@@ -171,7 +204,7 @@
     </div>
   </section>
 
-  <!-- SERVICE / BUSINESS (画像付き) -->
+  <!-- SERVICE / BUSINESS -->
   <section class="service">
     <div class="container">
       <h2 class="section-title">CREATIVE & SERVICES</h2>
@@ -229,5 +262,6 @@
   <!-- JS読み込み -->
   <script src="assets/js/header.js"></script>
   <script src="assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
