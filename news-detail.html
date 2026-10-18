@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEWS DETAIL | ORB GARDEN</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/common.css">
+  <style>
+    .news-detail-section { padding: 60px 0 100px; }
+    .news-detail-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 50px;
+      max-width: 850px;
+      margin: 0 auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    .news-detail-meta {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-bottom: 15px;
+      font-family: var(--font-en);
+      font-weight: 700;
+      color: var(--text-sub);
+    }
+    .news-detail-title {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.4;
+      margin-bottom: 30px;
+    }
+    .news-detail-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 35px;
+      background: #f1f5f9;
+    }
+    .news-detail-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .news-detail-body {
+      font-size: 1.05rem;
+      line-height: 2;
+      color: var(--text-main);
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 共通ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <main class="news-detail-section">
+    <div class="container">
+      <div class="news-detail-card" id="newsDetailContainer">
+        <p>記事を読み込み中...</p>
+      </div>
+
+      <div class="back-btn-container" style="margin-top: 40px; text-align: center;">
+        <a href="index.html" class="btn-primary">トップに戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- 共通フッター -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ニュースデータと制御JS -->
+  <script src="assets/js/news-data.js"></script>
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const newsId = parseInt(params.get('id'));
+      const container = document.getElementById('newsDetailContainer');
+
+      const targetNews = newsData.find(item => item.id === newsId) || newsData[0];
+
+      document.title = `${targetNews.title} | ORB GARDEN`;
+      container.innerHTML = `
+        <div class="news-detail-meta">
+          <span>${targetNews.date}</span>
+          <span class="news-tag">${targetNews.tag}</span>
+        </div>
+        <h1 class="news-detail-title">${targetNews.title}</h1>
+        <div class="news-detail-thumb">
+          <img src="${targetNews.thumbnail}" alt="${targetNews.title}" onerror="this.style.display='none'">
+        </div>
+        <div class="news-detail-body">${targetNews.content}</div>
+      `;
+    });
+  </script>
+</body>
+</html>
