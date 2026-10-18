@@ -1,0 +1,94 @@
+/* ==========================================
+   規約・ポリシー系ページ 共通スタイル
+   ========================================== */
+
+.policy-page-section {
+  padding: 60px 0 100px;
+}
+
+.policy-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 45px 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.9;
+  color: var(--text-main);
+}
+
+.policy-card h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 35px 0 15px;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 12px;
+}
+
+.policy-card h2:first-child {
+  margin-top: 0;
+}
+
+.policy-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 20px 0 10px;
+}
+
+.policy-card p {
+  margin-bottom: 18px;
+  white-space: pre-line;
+}
+
+.policy-card ul, .policy-card ol {
+  margin-bottom: 20px;
+  padding-left: 24px;
+}
+
+.policy-card li {
+  margin-bottom: 8px;
+}
+
+.policy-card .address-box {
+  background-color: var(--bg-sub);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px 25px;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.policy-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+}
+
+.policy-card th, .policy-card td {
+  border: 1px solid var(--border-color);
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.policy-card th {
+  background-color: var(--bg-sub);
+  width: 30%;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .policy-card {
+    padding: 30px 20px;
+  }
+  .policy-card th, .policy-card td {
+    display: block;
+    width: 100%;
+  }
+  .policy-card th {
+    border-bottom: none;
+  }
+}
