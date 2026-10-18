@@ -1,123 +1,239 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GANAR OFFICIAL SHOP</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORB GARDEN | 茨城発のeスポーツチーム</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <div id="header-holder"></div>
-
-    <div class="slider-wrapper">
-        <div class="slider-container">
-            <div class="slide" style="background: linear-gradient(135deg, #005f9e, #00bfff);">
-                <h2>2026 NEW UNIFORM</h2>
-                <p>歴代最高の一着。本日より数量限定で販売開始！</p>
-            </div>
-            <div class="slide" style="background: linear-gradient(135deg, #121212, #262626);">
-                <h2>HEKION LIMITED GEAR</h2>
-                <p>母体ブランド「HEKION」プロデュースグッズ第1弾登場！</p>
-            </div>
-            <div class="slide" style="background: linear-gradient(135deg, #0099ff, #005f9e);">
-                <h2>SUMMER LIMITED TOWEL</h2>
-                <p>数量限定！スタジアムを鮮やかな水色に染め上げろ</p>
-            </div>
-        </div>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">ORB GARDEN</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <nav class="nav">
+        <ul class="nav-list" id="navList">
+          <li><a href="about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="news.html" class="nav-link">INFO</a></li>
+          <li><a href="member.html" class="nav-link">MEMBER</a></li>
+          <li><a href="service.html" class="nav-link">SERVICE</a></li>
+          <li><a href="sponsor.html" class="nav-link">SPONSOR</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+          <li><a href="https://orbgarden.booth.pm/" target="_blank" class="nav-link nav-btn-store">STORE</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="search-box">
-        <input type="text" placeholder="グッズ名、選手名を入力...">
+  <!-- メインビジュアル -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>ORB GARDEN</h1>
+      <p>茨城県を拠点に活動するストリートスタイルのeスポーツチーム</p>
     </div>
+  </section>
 
-    <div class="section-container">
-        <div class="section-title">👤 選手から探す / PLAYERS</div>
-        <div class="players-nav-box">
-            <button class="nav-to-players-btn" onclick="location.href='players.html'">
-                選手一覧からグッズを探す ➔
-            </button>
+  <!-- ABOUT (サマリー) -->
+  <section class="about">
+    <div class="container">
+      <h2 class="section-title">ABOUT US</h2>
+      <div class="about-summary">
+        <p>競技シーンでの勝利と地域社会への貢献を両立し、次世代のプレイヤー育成とeスポーツ文化の発展に取り組んでいます。</p>
+        <div class="btn-center">
+          <a href="about.html" class="btn-primary">チーム・理念について詳しく</a>
         </div>
+      </div>
     </div>
+  </section>
 
-    <div class="horizontal-scroll">
-        <div class="category-tag" onclick="location.href='category.html?category=uniform'">👕 ユニフォーム</div>
-        <div class="category-tag" onclick="location.href='category.html?category=towel'">🧣 タオル</div>
-        <div class="category-tag" onclick="location.href='category.html?category=goods'">🔑 雑貨・小物</div>
+  <!-- NEWS -->
+  <section class="news">
+    <div class="container">
+      <h2 class="section-title">LATEST NEWS</h2>
+      <div class="news-container">
+        
+        <!-- 最新ニュース (大1件) -->
+        <article class="news-main-card">
+          <div class="news-img"></div>
+          <div class="news-main-content">
+            <div class="news-meta">
+              <span class="news-date">2026.10.14</span>
+              <span class="news-tag">MEDIA</span>
+            </div>
+            <h3 class="news-title">茨城県教育委員会公式サイト「おしえて ふれあちゃん！」にORB GARDENが掲載されました！</h3>
+          </div>
+        </article>
+
+        <!-- 2〜4番目のニュース (小3件横並び) -->
+        <div class="news-sub-grid">
+          <article class="news-sub-card">
+            <div class="news-img"></div>
+            <div class="news-sub-content">
+              <div class="news-meta">
+                <span class="news-date">2026.10.01</span>
+                <span class="news-tag">TEAM</span>
+              </div>
+              <h4 class="news-title">APEX競技部門 新メンバー加入のお知らせ</h4>
+            </div>
+          </article>
+
+          <article class="news-sub-card">
+            <div class="news-img"></div>
+            <div class="news-sub-content">
+              <div class="news-meta">
+                <span class="news-date">2026.09.01</span>
+                <span class="news-tag">SPONSOR</span>
+              </div>
+              <h4 class="news-title">【お知らせ】スポンサー契約継続のお知らせ</h4>
+            </div>
+          </article>
+
+          <article class="news-sub-card">
+            <div class="news-img"></div>
+            <div class="news-sub-content">
+              <div class="news-meta">
+                <span class="news-date">2026.08.09</span>
+                <span class="news-tag">GOODS</span>
+              </div>
+              <h4 class="news-title">ApexLegendsプロリーグ出場記念 限定ユニフォーム販売開始</h4>
+            </div>
+          </article>
+        </div>
+
+      </div>
+      <div class="btn-center">
+        <a href="news.html" class="btn-primary">ニュース一覧を見る</a>
+      </div>
     </div>
+  </section>
 
-    <div class="section-container">
-        <div class="section-title">🔥 注目の新商品 / NEW ARRIVALS</div>
-        <div class="products-grid">
-            <div class="product-card" onclick="location.href='product.html?id=p1'">
-                <div class="product-img">👕</div>
-                <div class="product-name">レプリカユニ2026</div>
-                <div class="product-price">¥12,000</div>
-            </div>
-            <div class="product-card" onclick="location.href='product.html?id=p2'">
-                <div class="product-img">🧣</div>
-                <div class="product-name">選手マフラータオル</div>
-                <div class="product-price">¥2,500</div>
-            </div>
-            <div class="product-card" onclick="location.href='product.html?id=p3'">
-                <div class="product-img">👜</div>
-                <div class="product-name">公式トートバッグ</div>
-                <div class="product-price">¥3,800</div>
-            </div>
-            <div class="product-card" onclick="location.href='product.html?id=p4'">
-                <div class="product-img">🎒</div>
-                <div class="product-name">大容量バックパック</div>
-                <div class="product-price">¥8,500</div>
-            </div>
+  <!-- MEMBER (ピックアップ) -->
+  <section class="member">
+    <div class="container">
+      <h2 class="section-title">PICKUP MEMBERS</h2>
+      <div class="member-grid">
+        <div class="member-card">
+          <div class="member-img"></div>
+          <div class="member-role">Streamer</div>
+          <div class="member-name">じゅんぴーち</div>
         </div>
-        <div class="more-btn-container">
-            <button class="view-all-btn" onclick="location.href='category.html?type=new'">VIEW ALL ➔</button>
+        <div class="member-card">
+          <div class="member-img"></div>
+          <div class="member-role">Streamer</div>
+          <div class="member-name">ザキ</div>
         </div>
+        <div class="member-card">
+          <div class="member-img"></div>
+          <div class="member-role">Streamer</div>
+          <div class="member-name">まち</div>
+        </div>
+        <div class="member-card">
+          <div class="member-img"></div>
+          <div class="member-role">Staff</div>
+          <div class="member-name">クルス</div>
+        </div>
+      </div>
+      <div class="btn-center">
+        <a href="member.html" class="btn-primary">全メンバーを見る</a>
+      </div>
     </div>
+  </section>
 
-    <div class="section-container" id="ranking">
-        <div class="section-title">👑 売上ランキング / RANKING</div>
-        <div class="ranking-container">
-            <div class="ranking-item" onclick="location.href='product.html?id=p1'">
-                <div class="rank-badge rank-1">1</div>
-                <div class="rank-img">👕</div>
-                <div class="rank-info">
-                    <div class="product-name" style="margin: 0;">レプリカユニフォーム2026</div>
-                    <div class="product-price">¥12,000</div>
-                </div>
-            </div>
-            <div class="ranking-item" onclick="location.href='product.html?id=p2'">
-                <div class="rank-badge rank-2">2</div>
-                <div class="rank-img">🧣</div>
-                <div class="rank-info">
-                    <div class="product-name" style="margin: 0;">推し選手マフラータオル</div>
-                    <div class="product-price">¥2,500</div>
-                </div>
-            </div>
+  <!-- YOUTUBE & MEDIA -->
+  <section class="youtube">
+    <div class="container">
+      <h2 class="section-title">OFFICIAL YOUTUBE</h2>
+      <div class="youtube-grid">
+        <div class="video-card">
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/sample1" allowfullscreen></iframe>
+          </div>
+          <div class="video-title">人気ストリーマー多数出場のAPEX大会</div>
         </div>
+        <div class="video-card">
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/sample2" allowfullscreen></iframe>
+          </div>
+          <div class="video-title">メンバーコラボ動画多数公開中！</div>
+        </div>
+        <div class="video-card">
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/sample3" allowfullscreen></iframe>
+          </div>
+          <div class="video-title">ORBでしか見られない企画動画</div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="section-container">
-        <div class="section-title">✨ オススメの商品 / RECOMMEND</div>
-        <div class="products-grid">
-            <div class="product-card" onclick="location.href='product.html?id=p5'">
-                <div class="product-img">🔑</div>
-                <div class="product-name">GANAR ロゴステッカー</div>
-                <div class="product-price">¥500</div>
-            </div>
-            <div class="product-card" onclick="location.href='product.html?id=p6'">
-                <div class="product-img">📱</div>
-                <div class="product-name">公式スマホケース</div>
-                <div class="product-price">¥2,200</div>
-            </div>
+  <!-- SERVICE / BUSINESS -->
+  <section class="service">
+    <div class="container">
+      <h2 class="section-title">CREATIVE & SERVICES</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">🎮</div>
+          <h3>eスポーツブース出展 / 大会運営</h3>
+          <p>体験ブースから大規模大会の制作・進行まで対応します。</p>
         </div>
-        <div class="more-btn-container">
-            <button class="view-all-btn" onclick="location.href='category.html?type=recommend'">VIEW ALL ➔</button>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>デザイン・動画制作</h3>
+          <p>イラスト、ロゴ、配信画面やPVなどの制作業務を承ります。</p>
         </div>
+        <div class="service-card">
+          <div class="service-icon">🎓</div>
+          <h3>講師・コーチング委託</h3>
+          <p>学校・自治体・企業様向けのeスポーツ講習や指導を実施します。</p>
+        </div>
+      </div>
+      <div class="btn-center">
+        <a href="service.html" class="btn-primary">事業・制作メニュー詳細</a>
+      </div>
     </div>
+  </section>
 
-    <div id="footer-holder"></div>
+  <!-- SPONSORS -->
+  <section class="sponsor">
+    <div class="container">
+      <h2 class="section-title">SPONSORS</h2>
+      <div class="sponsor-grid">
+        <div class="sponsor-item">斎藤英次商店</div>
+        <div class="sponsor-item">eプリントサービス</div>
+        <div class="sponsor-item">菊地蓮根</div>
+        <div class="sponsor-item">カーマッチ茨城日立店</div>
+      </div>
+    </div>
+  </section>
 
-    <script src="load-components.js"></script>
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3>ORB GARDEN</h3>
+          <p>茨城発 ストリートスタイルeスポーツチーム</p>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="news.html">INFO</a></li>
+            <li><a href="member.html">MEMBER</a></li>
+            <li><a href="service.html">SERVICE</a></li>
+            <li><a href="sponsor.html">SPONSOR</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; ORB GARDEN All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
