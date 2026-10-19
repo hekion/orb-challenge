@@ -9,14 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   
-  <!-- CSS読み込み（他ページと共通） -->
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/top.css">
   
   <style>
-    /* ニュース一覧ページのスタイル統一・視認性強化 */
+    /* ニュース一覧ページのスタイル（白背景・黒文字対応） */
     .news-page-section {
       padding: 60px 0 100px;
+      background: #ffffff; /* ページ全体を白背景に固定 */
     }
     .news-list-grid {
       display: grid;
@@ -25,25 +25,26 @@
       margin-top: 40px;
     }
     .news-card-item {
-      background: #1e293b;
+      background: #ffffff; /* カード自体も白背景 */
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid #e2e8f0; /* 薄い上品なグレー枠線 */
       transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
       text-decoration: none;
-      color: #ffffff;
+      color: #0f172a; /* テキスト全体を黒・紺ベースに */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
     .news-card-item:hover {
       transform: translateY(-5px);
-      border-color: var(--accent-color, #00d2ff);
-      box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+      border-color: #0284c7;
+      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.1);
     }
     .news-card-thumb {
       width: 100%;
       aspect-ratio: 16 / 9;
-      background: #0f172a;
+      background: #f1f5f9;
       overflow: hidden;
     }
     .news-card-thumb img {
@@ -57,7 +58,7 @@
     }
     .news-card-body {
       padding: 24px 20px;
-      background: #1e293b; /* 深みのあるソリッド背景で文字をくっきり表示 */
+      background: #ffffff;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -70,15 +71,15 @@
     }
     .news-card-date {
       font-size: 0.85rem;
-      color: #94a3b8;
+      color: #64748b; /* 落ち着いたグレーの日付 */
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
     }
     .news-card-tag {
       font-size: 0.75rem;
       padding: 3px 8px;
-      background: var(--accent-color, #00d2ff);
-      color: #000000;
+      background: #0284c7; /* アクセント用のブルー */
+      color: #ffffff;
       font-weight: 800;
       border-radius: 4px;
       font-family: 'Montserrat', sans-serif;
@@ -87,7 +88,7 @@
       font-size: 1.05rem;
       font-weight: 700;
       line-height: 1.6;
-      color: #ffffff; /* クッキリとした白文字に固定 */
+      color: #0f172a; /* タイトルをはっきりと黒字に */
       margin: 0;
       display: -webkit-box;
       -webkit-line-clamp: 3;
@@ -104,12 +105,12 @@
   <main class="news-page-section">
     <div class="container">
       
-      <h2 class="section-title">
+      <h2 class="section-title" style="color: #0f172a;">
         <span class="en">NEWS / INFORMATION</span>
         <span class="ja">最新ニュース・お知らせ一覧</span>
       </h2>
 
-      <!-- ニュースカードグリッド（即時描画領域） -->
+      <!-- ニュースカードグリッド -->
       <div class="news-list-grid" id="newsListContainer">
         <!-- JSで高速描画されます -->
       </div>
@@ -125,7 +126,7 @@
   <script src="assets/js/header.js"></script>
   <script src="assets/js/footer.js"></script>
 
-  <!-- 爆速描画処理（元の美しいカードデザインを維持・タイトルのみ） -->
+  <!-- 描画処理 -->
   <script>
     function renderNewsList() {
       const container = document.getElementById('newsListContainer');
@@ -136,7 +137,7 @@
           return `
             <a href="news-detail.html?id=${item.id}" class="news-card-item">
               <div class="news-card-thumb">
-                <img src="${item.thumbnail}" alt="${item.title}" onerror="this.style.display='none'; this.parentNode.style.background='#1e293b';">
+                <img src="${item.thumbnail}" alt="${item.title}" onerror="this.style.background='#f1f5f9';">
               </div>
               <div class="news-card-body">
                 <div class="news-card-meta">
@@ -149,11 +150,10 @@
           `;
         }).join('');
       } else {
-        container.innerHTML = '<p style="color: #94a3b8; padding: 40px 0; grid-column: 1/-1; text-align: center;">現在お知らせはありません。</p>';
+        container.innerHTML = '<p style="color: #64748b; padding: 40px 0; grid-column: 1/-1; text-align: center;">現在お知らせはありません。</p>';
       }
     }
 
-    // DOMロード後即実行
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', renderNewsList);
     } else {
