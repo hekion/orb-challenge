@@ -9,14 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   
-  <!-- CSS読み込み -->
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/top.css">
   
   <style>
     .news-detail-section { 
       padding: 60px 0 100px; 
-      background: #ffffff; /* 白背景を明示 */
+      background: #ffffff; 
     }
     .news-detail-content {
       width: 100%;
@@ -32,7 +31,7 @@
       font-weight: 700;
     }
     .news-detail-date {
-      color: #64748b; /* 濃いめのグレーで見やすく */
+      color: #64748b;
       font-size: 0.95rem;
     }
     .news-detail-tag {
@@ -46,7 +45,7 @@
     .news-detail-title {
       font-size: 2rem;
       font-weight: 800;
-      color: #0f172a; /* 濃い黒・紺色でクッキリ表示 */
+      color: #0f172a;
       line-height: 1.4;
       margin-bottom: 30px;
       word-break: break-word;
@@ -68,63 +67,46 @@
     .news-detail-body {
       font-size: 1.05rem;
       line-height: 2;
-      color: #1e293b; /* 本文も濃い黒字で視認性を確保 */
+      color: #1e293b;
       white-space: pre-line;
       word-break: break-word;
     }
+    /* 記事内のリンクがしっかり青字で分かりやすくするように設定 */
     .news-detail-body a {
       color: #0284c7;
       text-decoration: underline;
+      font-weight: 600;
     }
     .news-detail-body a:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
 
-    /* スマホ表示時の最適化 */
     @media (max-width: 768px) {
-      .news-detail-section {
-        padding: 30px 0 60px;
-      }
-      .news-detail-title {
-        font-size: 1.4rem;
-        line-height: 1.5;
-        margin-bottom: 20px;
-      }
-      .news-detail-thumb {
-        margin-bottom: 25px;
-      }
-      .news-detail-body {
-        font-size: 0.95rem;
-        line-height: 1.8;
-      }
+      .news-detail-section { padding: 30px 0 60px; }
+      .news-detail-title { font-size: 1.4jlrem; line-height: 1.5; margin-bottom: 20px; }
+      .news-detail-thumb { margin-bottom: 25px; }
+      .news-detail-body { font-size: 0.95rem; line-height: 1.8; }
     }
   </style>
 </head>
 <body>
 
-  <!-- 共通ヘッダー -->
   <div id="header-placeholder"></div>
 
   <main class="news-detail-section">
     <div class="container">
-      
-      <!-- 記事表示エリア（カード化なし・白背景用テキストカラー） -->
       <article class="news-detail-content" id="newsDetailContainer">
         <p style="text-align: center; color: #64748b;">記事を読み込み中...</p>
       </article>
 
-      <!-- ニュース一覧に戻るボタン -->
       <div class="back-btn-container" style="margin-top: 60px; text-align: center;">
         <a href="news.html" class="btn-primary">ニュース一覧に戻る</a>
       </div>
-
     </div>
   </main>
 
-  <!-- 共通フッター -->
   <div id="footer-placeholder"></div>
 
-  <!-- ニュースデータと制御JS -->
   <script src="assets/js/news-data.js"></script>
   <script src="assets/js/header.js"></script>
   <script src="assets/js/footer.js"></script>
