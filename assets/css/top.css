@@ -133,11 +133,13 @@ section.bg-sub {
   font-weight: 700;
 }
 
+/* ① ニュースカテゴリタグ：水色背景 × 黒文字に統一 */
 .news-tag {
-  background-color: rgba(0, 210, 255, 0.1);
-  color: var(--accent-color);
-  padding: 2px 8px;
+  background-color: var(--accent-color) !important;
+  color: #000000 !important;
+  padding: 3px 8px;
   border-radius: 4px;
+  font-weight: 800;
 }
 
 .news-title {
@@ -162,30 +164,31 @@ section.bg-sub {
   flex-wrap: wrap;
 }
 
+/* ② 部門絞り込みボタン：ニュース等とデザインを完全統一（初期: グレー系 / アクティブ: 水色×黒文字） */
 .tab-btn {
-  background-color: #ffffff;
-  color: var(--text-sub);
-  border: 1px solid var(--border-color);
-  padding: 10px 24px;
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 8px 20px;
   border-radius: 30px;
   font-family: var(--font-en);
-  font-weight: 800;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.2s ease;
 }
 
 .tab-btn:hover {
-  color: var(--text-main);
-  border-color: var(--text-main);
+  background-color: var(--accent-color);
+  color: #000000;
+  border-color: var(--accent-color);
 }
 
 .tab-btn.active {
-  background-color: var(--text-main);
-  color: #ffffff;
-  border-color: var(--text-main);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  background-color: var(--accent-color) !important;
+  color: #000000 !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 4px 12px rgba(0, 210, 255, 0.25);
 }
 
 .member-grid {
@@ -319,7 +322,7 @@ section.bg-sub {
 .store-banner-link {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 1; /* おすすめ比率 3:1 */
+  aspect-ratio: 3 / 1;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border-color);
@@ -393,11 +396,11 @@ section.bg-sub {
 }
 
 /* ==========================================
-   SPONSORS (PC: 横3列 × 縦2列 / スマホ: 横2列 × 縦3列)
+   SPONSORS
    ========================================== */
 .sponsor-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* PC: 横3列 */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: center;
 }
@@ -439,7 +442,6 @@ section.bg-sub {
     grid-template-columns: 1fr;
   }
 
-  /* スマホ版スポンサー: 横2列 × 縦3列 */
   .sponsor-grid {
     grid-template-columns: repeat(2, 1fr);
   }
