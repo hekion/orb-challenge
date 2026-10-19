@@ -60,14 +60,19 @@
   margin-bottom: 25px;
 }
 
+/* ① メンバー詳細のカテゴリ表記：他ページのタグと合わせて「水色背景×黒文字」に統一 */
 .member-detail-category {
+  display: inline-block;
   font-family: var(--font-en);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 800;
-  color: var(--accent-color);
-  letter-spacing: 2px;
+  background-color: var(--accent-color);
+  color: #000000;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
 }
 
 .member-detail-name {
