@@ -43,7 +43,7 @@
   aspect-ratio: 1050 / 380;
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(135deg, #0b0f17 0%, #1e293b 100%);
+  background: #0f172a; /* 白背景に馴染む落ち着いたダークトーン */
   border: 1px solid var(--border-color);
 }
 
@@ -60,7 +60,7 @@
   margin-bottom: 25px;
 }
 
-/* ① メンバー詳細のカテゴリ表記：他ページのタグと合わせて「水色背景×黒文字」に統一 */
+/* メンバー詳細のカテゴリ表記：他ページのタグと合わせて「水色背景×黒文字」に統一 */
 .member-detail-category {
   display: inline-block;
   font-family: var(--font-en);
