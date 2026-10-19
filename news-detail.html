@@ -16,6 +16,7 @@
   <style>
     .news-detail-section { 
       padding: 60px 0 100px; 
+      background: #ffffff; /* 白背景を明示 */
     }
     .news-detail-content {
       width: 100%;
@@ -31,7 +32,7 @@
       font-weight: 700;
     }
     .news-detail-date {
-      color: #94a3b8;
+      color: #64748b; /* 濃いめのグレーで見やすく */
       font-size: 0.95rem;
     }
     .news-detail-tag {
@@ -45,7 +46,7 @@
     .news-detail-title {
       font-size: 2rem;
       font-weight: 800;
-      color: #ffffff;
+      color: #0f172a; /* 濃い黒・紺色でクッキリ表示 */
       line-height: 1.4;
       margin-bottom: 30px;
       word-break: break-word;
@@ -56,7 +57,7 @@
       border-radius: 12px;
       overflow: hidden;
       margin-bottom: 40px;
-      background: #0f172a;
+      background: #f1f5f9;
     }
     .news-detail-thumb img {
       width: 100%;
@@ -67,12 +68,12 @@
     .news-detail-body {
       font-size: 1.05rem;
       line-height: 2;
-      color: #e2e8f0;
+      color: #1e293b; /* 本文も濃い黒字で視認性を確保 */
       white-space: pre-line;
       word-break: break-word;
     }
     .news-detail-body a {
-      color: var(--accent-color, #00d2ff);
+      color: #0284c7;
       text-decoration: underline;
     }
     .news-detail-body a:hover {
@@ -82,7 +83,7 @@
     /* スマホ表示時の最適化 */
     @media (max-width: 768px) {
       .news-detail-section {
-        padding: 40px 0 80px;
+        padding: 30px 0 60px;
       }
       .news-detail-title {
         font-size: 1.4rem;
@@ -107,9 +108,9 @@
   <main class="news-detail-section">
     <div class="container">
       
-      <!-- 記事表示エリア（カード背景・枠線なし） -->
+      <!-- 記事表示エリア（カード化なし・白背景用テキストカラー） -->
       <article class="news-detail-content" id="newsDetailContainer">
-        <p style="text-align: center; color: #94a3b8;">記事を読み込み中...</p>
+        <p style="text-align: center; color: #64748b;">記事を読み込み中...</p>
       </article>
 
       <!-- ニュース一覧に戻るボタン -->
@@ -143,7 +144,7 @@
         </div>
         <h1 class="news-detail-title">${targetNews.title}</h1>
         <div class="news-detail-thumb">
-          <img src="${targetNews.thumbnail}" alt="${targetNews.title}" onerror="this.style.background='#1e293b'">
+          <img src="${targetNews.thumbnail}" alt="${targetNews.title}" onerror="this.style.background='#cbd5e1'">
         </div>
         <div class="news-detail-body">${targetNews.content}</div>
       `;
