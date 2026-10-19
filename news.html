@@ -9,31 +9,60 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   
+  <!-- CSS読み込み -->
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/top.css">
   
   <style>
-    /* ニュース一覧ページのスタイル（白背景・黒文字対応） */
     .news-page-section {
       padding: 60px 0 100px;
-      background: #ffffff; /* ページ全体を白背景に固定 */
+      background: #ffffff;
     }
+    
+    /* カテゴリ絞り込みタブ */
+    .news-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+      justify-content: center;
+    }
+    .news-tab-btn {
+      padding: 8px 20px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #334155;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      transition: all 0.2s ease;
+    }
+    .news-tab-btn:hover,
+    .news-tab-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #0284c7;
+    }
+
+    /* ニュースカードグリッド */
     .news-list-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 30px;
-      margin-top: 40px;
     }
     .news-card-item {
-      background: #ffffff; /* カード自体も白背景 */
+      background: #ffffff;
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid #e2e8f0; /* 薄い上品なグレー枠線 */
+      border: 1px solid #e2e8f0;
       transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
       text-decoration: none;
-      color: #0f172a; /* テキスト全体を黒・紺ベースに */
+      color: #0f172a;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
     .news-card-item:hover {
@@ -71,14 +100,14 @@
     }
     .news-card-date {
       font-size: 0.85rem;
-      color: #64748b; /* 落ち着いたグレーの日付 */
+      color: #64748b;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
     }
     .news-card-tag {
       font-size: 0.75rem;
       padding: 3px 8px;
-      background: #0284c7; /* アクセント用のブルー */
+      background: #0284c7;
       color: #ffffff;
       font-weight: 800;
       border-radius: 4px;
@@ -88,12 +117,49 @@
       font-size: 1.05rem;
       font-weight: 700;
       line-height: 1.6;
-      color: #0f172a; /* タイトルをはっきりと黒字に */
+      color: #0f172a;
       margin: 0;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+    }
+
+    /* ページネーション（ページ送りボタン） */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 60px;
+    }
+    .page-btn {
+      min-width: 40px;
+      height: 40px;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #334155;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .page-btn:hover,
+    .page-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #0284c7;
+    }
+    .page-btn.disabled {
+      opacity: 0.4;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -110,10 +176,23 @@
         <span class="ja">最新ニュース・お知らせ一覧</span>
       </h2>
 
+      <!-- カテゴリ切り替えタブ -->
+      <div class="news-tabs" id="newsTabs">
+        <button class="news-tab-btn active" data-tag="ALL">ALL</button>
+        <button class="news-tab-btn" data-tag="MEDIA">MEDIA</button>
+        <button class="news-tab-btn" data-tag="TEAM">TEAM</button>
+        <button class="news-tab-btn" data-tag="SPONSOR">SPONSOR</button>
+        <button class="news-tab-btn" data-tag="EVENT">EVENT</button>
+        <button class="news-tab-btn" data-tag="GOODS">GOODS</button>
+      </div>
+
       <!-- ニュースカードグリッド -->
       <div class="news-list-grid" id="newsListContainer">
-        <!-- JSで高速描画されます -->
+        <!-- JSで動的描画 -->
       </div>
+
+      <!-- ページネーション描画エリア -->
+      <div class="pagination" id="paginationContainer"></div>
 
     </div>
   </main>
@@ -121,43 +200,143 @@
   <!-- 共通フッター -->
   <div id="footer-placeholder"></div>
 
-  <!-- JS読み込み -->
+  <!-- スクリプト読み込み -->
   <script src="assets/js/news-data.js"></script>
   <script src="assets/js/header.js"></script>
   <script src="assets/js/footer.js"></script>
 
-  <!-- 描画処理 -->
+  <!-- 絞り込み ＆ ページネーション制御スクリプト -->
   <script>
-    function renderNewsList() {
+    const ITEMS_PER_PAGE = 10; // 1ページあたりの表示件数
+    let currentTag = 'ALL';
+    let currentPage = 1;
+
+    function initNewsPage() {
+      if (typeof newsData === 'undefined') return;
+
+      // URLパラメータ（?tag=TEAM や ?page=2）の初期読み込み
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('tag')) {
+        currentTag = params.get('tag');
+      }
+      if (params.has('page')) {
+        currentPage = parseInt(params.get('page')) || 1;
+      }
+
+      // タブの初期アクティブ状態を反映
+      const tabBtns = document.querySelectorAll('.news-tab-btn');
+      tabBtns.forEach(btn => {
+        if (btn.getAttribute('data-tag') === currentTag) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+
+        // タブクリックイベント
+        btn.addEventListener('click', () => {
+          currentTag = btn.getAttribute('data-tag');
+          currentPage = 1; // タブを変えたら1ページ目に戻す
+          updateURL();
+          renderNews();
+        });
+      });
+
+      renderNews();
+    }
+
+    function renderNews() {
       const container = document.getElementById('newsListContainer');
+      const pagerContainer = document.getElementById('paginationContainer');
       if (!container) return;
 
-      if (typeof newsData !== 'undefined' && newsData.length > 0) {
-        container.innerHTML = newsData.map(item => {
-          return `
-            <a href="news-detail.html?id=${item.id}" class="news-card-item">
-              <div class="news-card-thumb">
-                <img src="${item.thumbnail}" alt="${item.title}" onerror="this.style.background='#f1f5f9';">
-              </div>
-              <div class="news-card-body">
-                <div class="news-card-meta">
-                  <span class="news-card-date">${item.date}</span>
-                  <span class="news-card-tag">${item.tag}</span>
-                </div>
-                <h3 class="news-card-title">${item.title}</h3>
-              </div>
-            </a>
-          `;
-        }).join('');
+      // 1. タブに応じたフィルタリング
+      let filteredData = newsData;
+      if (currentTag !== 'ALL') {
+        filteredData = newsData.filter(item => item.tag.toUpperCase() === currentTag.toUpperCase());
+      }
+
+      // 2. 記事がない場合
+      if (filteredData.length === 0) {
+        container.innerHTML = '<p style="color: #64748b; padding: 40px 0; grid-column: 1/-1; text-align: center;">現在このカテゴリのお知らせはありません。</p>';
+        pagerContainer.innerHTML = '';
+        return;
+      }
+
+      // 3. ページネーション計算
+      const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const endIndex = startIndex + ITEMS_PER_PAGE;
+      const paginatedData = filteredData.slice(startIndex, endIndex);
+
+      // 4. 記事カードのHTML生成
+      container.innerHTML = paginatedData.map(item => `
+        <a href="news-detail.html?id=${item.id}" class="news-card-item">
+          <div class="news-card-thumb">
+            <img src="${item.thumbnail}" alt="${item.title}" onerror="this.style.background='#f1f5f9';">
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-card-date">${item.date}</span>
+              <span class="news-card-tag">${item.tag}</span>
+            </div>
+            <h3 class="news-card-title">${item.title}</h3>
+          </div>
+        </a>
+      `).join('');
+
+      // 5. ページネーション（ボタン）の生成
+      if (totalPages > 1) {
+        let pagerHtml = '';
+
+        // 「前へ」ボタン
+        pagerHtml += `<button class="page-btn ${currentPage === 1 ? 'disabled' : ''}" onclick="changePage(${currentPage - 1})">&lt;</button>`;
+
+        // ページ番号ボタン
+        for (let i = 1; i <= totalPages; i++) {
+          pagerHtml += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+        }
+
+        // 「次へ」ボタン
+        pagerHtml += `<button class="page-btn ${currentPage === totalPages ? 'disabled' : ''}" onclick="changePage(${currentPage + 1})">&gt;</button>`;
+
+        pagerContainer.innerHTML = pagerHtml;
       } else {
-        container.innerHTML = '<p style="color: #64748b; padding: 40px 0; grid-column: 1/-1; text-align: center;">現在お知らせはありません。</p>';
+        pagerContainer.innerHTML = '';
       }
     }
 
+    // ページ変更時の処理
+    window.changePage = function(page) {
+      currentPage = page;
+      updateURL();
+      renderNews();
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // ページ切り替え時に上部にスクロール
+    }
+
+    // URLの状態を綺麗に保つ（履歴管理）
+    function updateURL() {
+      const url = new URL(window.location);
+      if (currentTag === 'ALL') {
+        url.searchParams.delete('tag');
+      } else {
+        url.searchParams.set('tag', currentTag);
+      }
+      if (currentPage === 1) {
+        url.searchParams.delete('page');
+      } else {
+        url.searchParams.set('page', currentPage);
+      }
+      window.history.pushState({}, '', url);
+    }
+
+    // 実行
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', renderNewsList);
+      document.addEventListener('DOMContentLoaded', initNewsPage);
     } else {
-      renderNewsList();
+      initNewsPage();
     }
   </script>
 </body>
