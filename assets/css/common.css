@@ -359,7 +359,7 @@ img {
   .menu-toggle span:nth-child(2) { background-color: var(--accent-color); }
   .menu-toggle span:nth-child(3) { background-color: #ffffff; }
 
-  /* アクティブ時：黒色の「✕（バツ印）」に変形 */
+  /* アクティブ時：黒色の機関（✕）に変形 */
   .menu-toggle.active span:nth-child(1) {
     background-color: #0b0f17;
     transform: translateY(8.5px) rotate(45deg);
@@ -472,14 +472,15 @@ img {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px 20px;
+    gap: 10px 8px; /* 隙間をコンパクトに調整 */
     width: 100%;
-    max-width: 320px;
+    max-width: 360px; /* 最大幅を少し広げて余裕を持たせる */
   }
 
   .footer-links-group-mobile a {
     color: #94a3b8;
-    font-size: 0.8rem;
+    font-size: 0.72rem; /* フォントサイズを微調整して1行に収める */
+    white-space: nowrap; /* 2行への折り返しを強制阻止 */
   }
 
   .footer-team-logo {
