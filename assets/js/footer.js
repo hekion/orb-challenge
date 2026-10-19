@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <li><a href="${footerPrefix}privacy.html">プライバシーポリシー</a></li>
             <li><a href="${footerPrefix}fanletter.html">ファンレターとギフト</a></li>
             <li><a href="${footerPrefix}guideline.html">切り抜きルール</a></li>
-            <li><a href="${footerPrefix}legal.html">特商法表記</a></li>
+            <li><a href="${footerPrefix}legal.html">特定商取引法に関する表記</a></li>
             <li><a href="${footerPrefix}assets.html">デジタルアセット</a></li>
           </ul>
           <div class="footer-team-logo">ORB GARDEN</div>
