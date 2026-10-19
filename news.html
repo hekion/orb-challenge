@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   
-  <!-- CSS読み込み -->
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/top.css">
   
@@ -125,7 +124,7 @@
       overflow: hidden;
     }
 
-    /* ページネーション（ページ送りボタン） */
+    /* ページネーション */
     .pagination {
       display: flex;
       justify-content: center;
@@ -207,41 +206,48 @@
 
   <!-- 絞り込み ＆ ページネーション制御スクリプト -->
   <script>
-    const ITEMS_PER_PAGE = 10; // 1ページあたりの表示件数
+    const ITEMS_PER_PAGE = 10;
     let currentTag = 'ALL';
     let currentPage = 1;
 
     function initNewsPage() {
       if (typeof newsData === 'undefined') return;
 
-      // URLパラメータ（?tag=TEAM や ?page=2）の初期読み込み
       const params = new URLSearchParams(window.location.search);
       if (params.has('tag')) {
-        currentTag = params.get('tag');
+        currentTag = params.get('tag').toUpperCase();
       }
       if (params.has('page')) {
         currentPage = parseInt(params.get('page')) || 1;
       }
 
-      // タブの初期アクティブ状態を反映
+      updateTabActiveState();
+      renderNews();
+
+      // タブのクリックイベント設定
       const tabBtns = document.querySelectorAll('.news-tab-btn');
       tabBtns.forEach(btn => {
-        if (btn.getAttribute('data-tag') === currentTag) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-
-        // タブクリックイベント
         btn.addEventListener('click', () => {
-          currentTag = btn.getAttribute('data-tag');
-          currentPage = 1; // タブを変えたら1ページ目に戻す
+          currentTag = btn.getAttribute('data-tag').toUpperCase();
+          currentPage = 1; 
+          updateTabActiveState();
           updateURL();
           renderNews();
         });
       });
+    }
 
-      renderNews();
+    // タブのアクティブ状態を正確に切り替える関数
+    function updateTabActiveState() {
+      const tabBtns = document.querySelectorAll('.news-tab-btn');
+      tabBtns.forEach(btn => {
+        const btnTag = btn.getAttribute('data-tag').toUpperCase();
+        if (btnTag === currentTag) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active'); // ALLであっても他が選ばれたら確実に未選択（グレー）になる
+        }
+      });
     }
 
     function renderNews() {
@@ -249,20 +255,17 @@
       const pagerContainer = document.getElementById('paginationContainer');
       if (!container) return;
 
-      // 1. タブに応じたフィルタリング
       let filteredData = newsData;
       if (currentTag !== 'ALL') {
-        filteredData = newsData.filter(item => item.tag.toUpperCase() === currentTag.toUpperCase());
+        filteredData = newsData.filter(item => item.tag.toUpperCase() === currentTag);
       }
 
-      // 2. 記事がない場合
       if (filteredData.length === 0) {
         container.innerHTML = '<p style="color: #64748b; padding: 40px 0; grid-column: 1/-1; text-align: center;">現在このカテゴリのお知らせはありません。</p>';
         pagerContainer.innerHTML = '';
         return;
       }
 
-      // 3. ページネーション計算
       const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
       if (currentPage > totalPages) currentPage = totalPages;
       if (currentPage < 1) currentPage = 1;
@@ -271,7 +274,6 @@
       const endIndex = startIndex + ITEMS_PER_PAGE;
       const paginatedData = filteredData.slice(startIndex, endIndex);
 
-      // 4. 記事カードのHTML生成
       container.innerHTML = paginatedData.map(item => `
         <a href="news-detail.html?id=${item.id}" class="news-card-item">
           <div class="news-card-thumb">
@@ -287,36 +289,26 @@
         </a>
       `).join('');
 
-      // 5. ページネーション（ボタン）の生成
       if (totalPages > 1) {
         let pagerHtml = '';
-
-        // 「前へ」ボタン
         pagerHtml += `<button class="page-btn ${currentPage === 1 ? 'disabled' : ''}" onclick="changePage(${currentPage - 1})">&lt;</button>`;
-
-        // ページ番号ボタン
         for (let i = 1; i <= totalPages; i++) {
           pagerHtml += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
         }
-
-        // 「次へ」ボタン
         pagerHtml += `<button class="page-btn ${currentPage === totalPages ? 'disabled' : ''}" onclick="changePage(${currentPage + 1})">&gt;</button>`;
-
         pagerContainer.innerHTML = pagerHtml;
       } else {
         pagerContainer.innerHTML = '';
       }
     }
 
-    // ページ変更時の処理
     window.changePage = function(page) {
       currentPage = page;
       updateURL();
       renderNews();
-      window.scrollTo({ top: 0, behavior: 'smooth' }); // ページ切り替え時に上部にスクロール
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // URLの状態を綺麗に保つ（履歴管理）
     function updateURL() {
       const url = new URL(window.location);
       if (currentTag === 'ALL') {
@@ -332,7 +324,6 @@
       window.history.pushState({}, '', url);
     }
 
-    // 実行
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initNewsPage);
     } else {
