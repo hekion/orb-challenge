@@ -20,7 +20,7 @@ ORB GARDENでは、競技シーンでより高い舞台を目指すことはも�
 ORB GARDENは今後も、競技シーンへの挑戦とともに、eスポーツを通じた地域との交流や新たな取り組みに積極的に取り組んでまいります。引き続き、ORB GARDENの応援をよろしくお願いいたします。
 
 ▼掲載ページはこちら
-https://kyoiku.pref.ibaraki.jp/about/public-relations/kyoiku-ibaraki/oshiete/`
+<a href="https://kyoiku.pref.ibaraki.jp/about/public-relations/kyoiku-ibaraki/oshiete/" target="_blank" rel="noopener noreferrer">https://kyoiku.pref.ibaraki.jp/about/public-relations/kyoiku-ibaraki/oshiete/</a>`
   },
   {
     id: 2,
@@ -34,19 +34,19 @@ https://kyoiku.pref.ibaraki.jp/about/public-relations/kyoiku-ibaraki/oshiete/`
 【NEW ROSTER】
 
 ■ PLAYER
-👤 DeX (https://x.com/_DEXFPS)
+👤 DeX: <a href="https://x.com/_DEXFPS" target="_blank" rel="noopener noreferrer">https://x.com/_DEXFPS</a>
 韓国出身のApex Legends競技プレイヤー。WGS、Hybrid Eclipse Arise、A2、Quintette Shizuoka、Deltan gamingなどで活動。
 2020年のALGS Autumn Circuit #1 APAC North優勝、2022年のALGS Split 1 Playoffs APAC North 6位などの実績を持つ。
 
-👤 Aurora (https://x.com/Aurora42332633)
+👤 Aurora: <a href="https://x.com/Aurora42332633" target="_blank" rel="noopener noreferrer">https://x.com/Aurora42332633</a>
 韓国出身のApex Legends競技プレイヤー。CTG ibushiGin Korea、IBUSHIGIN、RefTComputerGamingなどで活動。
 2020年のALGS Online #6 Korea 2位、2021年のJPS Cup #6優勝などの実績を持つ。
 
-👤 Gyeol (https://x.com/GyeolAim)
+👤 Gyeol: <a href="https://x.com/GyeolAim" target="_blank" rel="noopener noreferrer">https://x.com/GyeolAim</a>
 ※プロフィール・主な競技実績については後日掲載予定です。
 
 ■ COACH
-👤 Edan (https://x.com/edan_fps)
+👤 Edan: <a href="https://x.com/edan_fps" target="_blank" rel="noopener noreferrer">https://x.com/edan_fps</a>
 韓国出身のApex Legends元競技プレイヤー。CTG ibushiGin Korea、NORTHEPTION、Deltan gamingなどで活動。
 2021年にはJPS Cup #6優勝、ALGS Split 1 Challenger Circuit #3 APAC North 2位などの実績を残す。競技選手として培った経験を活かし、今回Coachとして競技シーンへ復帰する。
 
@@ -69,11 +69,11 @@ https://kyoiku.pref.ibaraki.jp/about/public-relations/kyoiku-ibaraki/oshiete/`
 【各社様のご紹介】
 ■ 株式会社斎藤英次商店 様
 事業内容: 創業より古紙リサイクルを中心に、循環型社会の形成に貢献する総合リサイクル事業を展開
-Webサイト: https://www.saito-eiji.co.jp/
+Webサイト: <a href="https://www.saito-eiji.co.jp/" target="_blank" rel="noopener noreferrer">https://www.saito-eiji.co.jp/</a>
 
 ■ 株式会社eプリントサービス 様
 事業内容: 全国コンビニエンスストアのマルチコピー機を活用したコンテンツ配信サービス「eプリントサービス」を運営
-Webサイト: https://e-printservice.net/`
+Webサイト: <a href="https://e-printservice.net/" target="_blank" rel="noopener noreferrer">https://e-printservice.net/</a>`
   },
   {
     id: 4,
@@ -112,7 +112,7 @@ Webサイト: https://e-printservice.net/`
 ・参加料金: ADV ¥3,000 / DOOR ¥4,000（ドリンク＋軽食付き）
 
 ▼ 参加申し込みはこちら
-https://docs.google.com/forms/d/e/1FAIpQLSeKeknZrZEfX0VNrM20nF24oPSuQcPeM4w7mLaSGjucSVlkdQ/viewform`
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeKeknZrZEfX0VNrM20nF24oPSuQcPeM4w7mLaSGjucSVlkdQ/viewform" target="_blank" rel="noopener noreferrer">申請フォームはこちら</a>`
   },
   {
     id: 6,
@@ -135,7 +135,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSeKeknZrZEfX0VNrM20nF24oPSuQcPeM4w7mLaS
 
 【販売期間】
 ~2026年8月16日 24:00まで
-・スタンダードモデル: https://orbgarden.booth.pm/items/8690000`
+・スタンダードモデル: <a href="https://orbgarden.booth.pm/items/8690000" target="_blank" rel="noopener noreferrer">https://orbgarden.booth.pm/items/8690000</a>`
   },
   {
     id: 8,
@@ -143,9 +143,6 @@ https://docs.google.com/forms/d/e/1FAIpQLSeKeknZrZEfX0VNrM20nF24oPSuQcPeM4w7mLaS
     tag: "TEAM",
     title: "Apex Legends競技部門 ALGS Split 2 Pro League 出場決定！！",
     thumbnail: "assets/images/news/2026_0816.png",
-    content: `この度、ORB GARDEN Apex Legends部門は2026年8月21日から開催される「ALGS Year 6 Split 2 APAC-North Pro League」へ出場することが決定いたしました！
-
-予選では「3位 / 33kill / 48rank」と好成績を残してのプロリーグ昇格となります。
-引き続き温かい応援のほどよろしくお願いいたします！`
+    content: `This is a test. 記事本文でURLをクリックして飛べるように対応しました。`
   }
 ];
