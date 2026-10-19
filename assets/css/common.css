@@ -114,6 +114,44 @@ img {
 }
 
 /* ==========================================
+   共通のタグ・絞り込みボタンデザイン（水色×黒文字に統一）
+   ========================================== */
+/* ニュースのカテゴリタグ */
+.news-tag,
+.news-card-tag {
+  background-color: var(--accent-color) !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+  font-family: var(--font-en);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* メンバー部門絞り込み・ニュースカテゴリ絞り込みタブボタン */
+.member-tabs .tab-btn,
+.news-tab-btn {
+  padding: 8px 20px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  font-family: var(--font-en);
+  transition: all 0.2s ease;
+}
+
+.member-tabs .tab-btn:hover,
+.member-tabs .tab-btn.active,
+.news-tab-btn:hover,
+.news-tab-btn.active {
+  background-color: var(--accent-color) !important;
+  color: #000000 !important;
+  border-color: var(--accent-color) !important;
+}
+
+/* ==========================================
    ヘッダー（黒ベース）
    ========================================== */
 .header {
