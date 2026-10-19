@@ -18,7 +18,7 @@
       background: #ffffff;
     }
     
-    /* カテゴリ絞り込みタブ */
+    /* カテゴリ絞り込みタブ（水色背景×黒文字に統一） */
     .news-tabs {
       display: flex;
       flex-wrap: wrap;
@@ -41,9 +41,9 @@
     }
     .news-tab-btn:hover,
     .news-tab-btn.active {
-      background: #0284c7;
-      color: #ffffff;
-      border-color: #0284c7;
+      background: var(--accent-color, #00d2ff);
+      color: #000000;
+      border-color: var(--accent-color, #00d2ff);
     }
 
     /* ニュースカードグリッド */
@@ -66,8 +66,8 @@
     }
     .news-card-item:hover {
       transform: translateY(-5px);
-      border-color: #0284c7;
-      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.1);
+      border-color: var(--accent-color, #00d2ff);
+      box-shadow: 0 10px 25px rgba(0, 210, 255, 0.15);
     }
     .news-card-thumb {
       width: 100%;
@@ -103,11 +103,12 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
     }
+    /* 記事カード内タグ（水色背景×黒文字に統一） */
     .news-card-tag {
       font-size: 0.75rem;
       padding: 3px 8px;
-      background: #0284c7;
-      color: #ffffff;
+      background: var(--accent-color, #00d2ff);
+      color: #000000;
       font-weight: 800;
       border-radius: 4px;
       font-family: 'Montserrat', sans-serif;
@@ -124,7 +125,7 @@
       overflow: hidden;
     }
 
-    /* ページネーション */
+    /* ページネーション（水色×黒文字に統一） */
     .pagination {
       display: flex;
       justify-content: center;
@@ -152,9 +153,9 @@
     }
     .page-btn:hover,
     .page-btn.active {
-      background: #0284c7;
-      color: #ffffff;
-      border-color: #0284c7;
+      background: var(--accent-color, #00d2ff);
+      color: #000000;
+      border-color: var(--accent-color, #00d2ff);
     }
     .page-btn.disabled {
       opacity: 0.4;
