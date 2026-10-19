@@ -12,55 +12,37 @@
   <link rel="stylesheet" href="assets/css/top.css">
   
   <style>
-    /* ストアセクションのスタイル調整 */
+    /* ストアセクションのスタイル */
     .store-section {
       padding: 80px 0;
     }
-    .store-card {
-      background: var(--bg-card, #1e293b);
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .store-banner-wrapper {
       max-width: 800px;
       margin: 0 auto;
-      text-decoration: none;
+    }
+    .store-banner-link {
       display: block;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .store-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent-color, #00d2ff);
-      box-shadow: 0 10px 25px rgba(0, 210, 255, 0.15);
-    }
-    .store-thumb {
       width: 100%;
       aspect-ratio: 16 / 9;
-      background: #0f172a;
+      border-radius: 12px;
       overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
-    .store-thumb img {
+    .store-banner-link:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-color, #00d2ff);
+      box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+    }
+    .store-banner-link img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
       transition: transform 0.3s ease;
     }
-    .store-card:hover .store-thumb img {
-      transform: scale(1.05);
-    }
-    .store-body {
-      padding: 20px;
-      text-align: center;
-    }
-    .store-body h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--text-main, #ffffff);
-      margin-bottom: 6px;
-    }
-    .store-body p {
-      font-size: 0.9rem;
-      color: #94a3b8;
-      margin: 0;
+    .store-banner-link:hover img {
+      transform: scale(1.03);
     }
   </style>
 </head>
@@ -324,15 +306,11 @@
         <span class="en">STORE</span>
         <span class="ja">オフィシャルショップ</span>
       </h2>
-      <a href="https://orbgarden.booth.pm/" target="_blank" rel="noopener noreferrer" class="store-card">
-        <div class="store-thumb">
+      <div class="store-banner-wrapper">
+        <a href="https://orbgarden.booth.pm/" target="_blank" rel="noopener noreferrer" class="store-banner-link">
           <img src="assets/images/other/store-banner.png" alt="ORB GARDEN OFFICIAL STORE" onerror="this.style.background='#0b0f17';">
-        </div>
-        <div class="store-body">
-          <h3>ORB GARDEN OFFICIAL STORE ↗</h3>
-          <p>公式グッズや限定ユニフォームはこちらからご購入いただけます（画像をクリックしてショップへ）</p>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
   </section>
 
