@@ -6,32 +6,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const topMainNews = document.getElementById('topMainNews');
   const topSubNews = document.getElementById('topSubNews');
 
-  if (topMainNews && topSubNews && typeof newsData !== 'undefined' && newsData.length > 0) {
-    // 1番新しい記事 (メイン大枠)
-    const latest = newsData[0];
-    topMainNews.innerHTML = `
-      <a href="news-detail.html?id=${latest.id}" class="news-main-card" style="text-decoration:none; color:inherit;">
-        <div class="news-thumb-box">
-          <img src="${latest.thumbnail}" alt="${latest.title}" onerror="this.style.background='#cbd5e1'">
-        </div>
-        <div class="news-main-content">
-          <div class="news-meta">
-            <span class="news-date">${latest.date}</span>
-            <span class="news-tag">${latest.tag}</span>
+  if (topMainNews && topSubNews) {
+    if (typeof newsData !== 'undefined' && newsData.length > 0) {
+      // 最新ニュース（1件目）
+      const latest = newsData[0];
+      const plainTextMain = latest.content ? latest.content.replace(/<[^>]+>/g, '').replace(/\n/g, ' ') : '';
+      
+      topMainNews.innerHTML = `
+        <a href="news-detail.html?id=${latest.id}" class="news-main-card" style="text-decoration:none; color:inherit;">
+          <div class="news-thumb-box">
+            <img src="${latest.thumbnail}" alt="${latest.title}" onerror="this.style.background='#1e293b'">
           </div>
-          <h3 class="news-title">${latest.title}</h3>
-        </div>
-      </a>
-    `;
+          <div class="news-main-content">
+            <div class="news-meta">
+              <span class="news-date">${latest.date}</span>
+              <span class="news-tag">${latest.tag}</span>
+            </div>
+            <h3 class="news-title">${latest.title}</h3>
+            <p class="news-excerpt" style="font-size: 0.85rem; color: #94a3b8; margin-top: 8px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${plainTextMain.substring(0, 90)}...</p>
+          </div>
+        </a>
+      `;
 
-    // 2〜4番目の記事 (サブ3件横並び)
-    let subHtml = '';
-    const subList = newsData.slice(1, 4); // インデックス1〜3（2番目〜4番目）
-    subList.forEach(item => {
-      subHtml += `
+      // 2〜4番目の記事 (サブ3件横並び)
+      const subItems = newsData.slice(1, 4);
+      topSubNews.innerHTML = subItems.map(item => `
         <a href="news-detail.html?id=${item.id}" class="news-sub-card" style="text-decoration:none; color:inherit;">
           <div class="news-thumb-box">
-            <img src="${item.thumbnail}" alt="${item.title}" onerror="this.style.background='#cbd5e1'">
+            <img src="${item.thumbnail}" alt="${item.title}" onerror="this.style.background='#1e293b'">
           </div>
           <div class="news-sub-content">
             <div class="news-meta">
@@ -41,9 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <h4 class="news-title">${item.title}</h4>
           </div>
         </a>
-      `;
-    });
-    topSubNews.innerHTML = subHtml;
+      `).join('');
+    } else {
+      topMainNews.innerHTML = '<p style="color: #94a3b8; padding: 20px 0;">現在お知らせはありません。</p>';
+    }
   }
 
 
