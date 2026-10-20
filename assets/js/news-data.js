@@ -62,5 +62,29 @@ const newsData = [
     title: "Apex Legends競技部門 ALGS Split 2 Pro League 出場決定！！",
     thumbnail: "assets/images/news/2026_0816.png",
     content: `この度、ORB GARDEN Apex Legends部門は2026年8月21日から開催される「ALGS Year 6 Split 2 APAC-North Pro League」へ出場することが決定いたしました！\n\n予選では「3位 / 33kill / 48rank」と好成績を残してのプロリーグ昇格となります。\n引き続き温かい応援のほどよろしくお願いいたします！`
+  },
+  {
+    id: 9,
+    date: "2026.05.07",
+    tag: "TEAM",
+    title: "ORB GARDEN Overwatch 2部門 – 選手/コーチ/アナリスト/マネージャー募集のお知らせ",
+    thumbnail: "assets/images/news/2026_0507.png",
+    content: `茨城県拠点のプロeスポーツチーム『ORB GARDEN』は、さらなる高みを目指し『オーバーウォッチ 2』部門の設立・強化に伴う公募を開始いたします。\n\n共に競技シーンを勝ち抜き、チームの歴史を創り上げる情熱を持った方をお待ちしております。\n\n※本チームはBlizzard Entertainmentとは提携しておらず、公式の活動ではありません。\n\n《加入基本条件》※その他詳細は応募フォームよりご確認ください。\n・OWをプレイしている方\n・礼儀、マナーを守れる方\n・Discordで連絡・VC参加ができる方\n・チーム活動に参加する意思がある方\n　\n《応募フォーム》\n<a href="https://forms.gle/UZxv8yCF23Nq2gRv9" target="_blank" rel="noopener noreferrer">https://forms.gle/UZxv8yCF23Nq2gRv9</a>\n※加入後にチームルールの案内があります\n※迷惑行為・チート等は禁止\n　\n現在チームに所属している方はチームに許可を得た上でご応募下さい。\n書類選考通過した場合は所属チーム宛にご連絡させていただきます。\nたくさんのご応募お待ちしております。\n\n《お問い合わせ》\nお問い合わせは、以下よりお気軽にご連絡ください。\n\n📩 メール：orbgarden@gmail.com\n📱公式Twitter（DM）：<a href="https://x.com/ORBG_IBARAKI" target="_blank" rel="noopener noreferrer">https://x.com/ORBG_IBARAKI</a>\n🔗 公式サイト(問い合わせフォーム)：<a href="https://hekion.github.io/orb-challenge/contact.html" target="_blank" rel="noopener noreferrer">https://hekion.github.io/orb-challenge/contact.html</a>`
+  },
+  {
+    id: 10,
+    date: "2026.04.01",
+    tag: "TEAM",
+    title: "つくばビジネスカレッジ専門学校と業務提携契約を締結いたしました",
+    thumbnail: "assets/images/news/2026_0401_2.png",
+    content: `茨城県拠点のプロeスポーツチーム『ORB GARDEN』は、茨城県つくば市の専門学校「つくばビジネスカレッジ専門学校」様と、業務提携として契約を締結したことをお知らせいたします。\n\n【つくばビジネスカレッジ専門学校様からご紹介】\nつくばビジネスカレッジ専門学校は、つくば市にある実践重視の専門学校で、情報処理・デザイン・医療事務・ブライダルなど多様な分野を学べる学校です。\n基礎から丁寧に指導し、資格取得や就職サポートにも力を入れています。\n地域との連携も強く、実習やイベントを通して実務力を身につけられる点が特徴です。\n・公式サイト : <a href="https://www.tsg.ac.jp/" target="_blank" rel="noopener noreferrer">https://www.tsg.ac.jp/</a>\n\n《お問い合わせ》\nお問い合わせは、以下よりお気軽にご連絡ください。\n\n📩 メール：orbgarden@gmail.com\n📱公式Twitter（DM）：<a href="https://x.com/ORBG_IBARAKI" target="_blank" rel="noopener noreferrer">https://x.com/ORBG_IBARAKI</a>\n🔗 公式サイト(問い合わせフォーム)：<a href="https://hekion.github.io/orb-challenge/contact.html" target="_blank" rel="noopener noreferrer">https://hekion.github.io/orb-challenge/contact.html</a>`
+  },
+  {
+    id: 11,
+    date: "2026.04.01",
+    tag: "SPONSOR",
+    title: "カーマッチ茨城日立店とスポンサーシップ契約を締結のお知らせ",
+    thumbnail: "assets/images/news/2026_0401.png",
+    content: `茨城県拠点のプロeスポーツチーム『ORB GARDEN』は、カーローン特化型中古車販売事業のカーマッチ茨城日立店様と、スポンサー契約を締結したことをお知らせいたします。\n\n本スポンサーシップ締結により、ORB GARDENとカーマッチ茨城日立店様の協力で他にはない新しいコンテンツやサービスを生み出していきます。\nまたORB GARDENのストリーマーや選手活動を支えるファンの方々との交流を交え、サービスの一環としてカーマッチ茨城日立店様と連携し、eスポーツ及び茨城県地域から世界まで積極的に盛り上げてまいります。\n\n【カーマッチ茨城日立店からのご案内】\nカーマッチ茨城日立店は地域密着で安心の車販売・買取を提供。自己破産・債務整理中の方やシングルマザーの方も歓迎し、無理のないご提案で安心のカーライフをサポートします。\n中古車やカーローンでお困りの方はお気軽にご相談ください。\n\n・公式サイト : <a href="https://car-match.jp/hitachi/" target="_blank" rel="noopener noreferrer">https://car-match.jp/hitachi/</a>\n\n▼スポンサーシップ・協業に関するご案内\nORB GARDENでは、共に成長し、eスポーツを通じた新しい価値の創造や地域・業界の活性化に取り組んでいただけるスポンサー企業様・協業パートナー様を常時募集しております。\n\nチームの競技活動支援をはじめ、共同イベントの開催、コラボグッズ制作、SNSや配信での露出展開など、企業様の課題やニーズに応じた様々な連携プランをご提案いたします。ご興味がございましたら、お気軽に下記お問い合わせフォームよりご相談ください。\n<a href="https://hekion.github.io/orb-challenge/contact.html" target="_blank" rel="noopener noreferrer">https://hekion.github.io/orb-challenge/contact.html</a>`
   }
 ];
